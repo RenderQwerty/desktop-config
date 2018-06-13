@@ -1,0 +1,2 @@
+vagrant
+ sudo apt-get install linux-headers-4.15.0-23-generic build-essential dkms
