@@ -1,0 +1,5 @@
+---
+# handlers file for desktop
+
+ - name: Start Docker
+   service: name=docker state=started

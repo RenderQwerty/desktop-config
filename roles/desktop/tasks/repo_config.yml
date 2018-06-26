@@ -1,0 +1,4 @@
+---
+
+ - name: Add repositories
+   copy: src={{ role_path }}/files/repositories/ dest=/etc/apt/sources.list.d owner=root group=root

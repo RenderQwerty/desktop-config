@@ -1,0 +1,30 @@
+ ---
+
+ - name: install required packages
+   apt:
+     name=: "{{ item }}"
+     state=installed
+   with_items:
+     - chromium-browser
+     - qbittorrent
+     - keepassx
+     - calibre
+     - vim
+     - virtualbox
+     - virtualbox-ext-pack
+     - virtualbox-guest-additions-iso
+     - virtualbox-qt
+     - virtualbox-dkms
+     - skypeforlinux
+     - zsh
+     - zsh-common
+     - vlc
+     - telegram
+     - snapd
+     - slack-desktop
+     - neofetch
+     - conky-all
+     - build-essential
+     - dkms
+     - vagrant
+     - git
