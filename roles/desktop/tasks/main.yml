@@ -1,10 +1,6 @@
 ---
 # tasks file for desktop
 
- - include: repo_config.yml
-
- - name: Update system
-   apt: update_cache=yes upgrade=yes autoclean=yes
-
- - include: software.yml
- - include: conky.yml
+- include: repo_config.yml
+- include: software.yml
+- include: conky.yml
