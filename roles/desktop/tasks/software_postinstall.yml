@@ -1,0 +1,4 @@
+---
+
+- name: configure_vscode
+  script: ../files/vscode/code.sh

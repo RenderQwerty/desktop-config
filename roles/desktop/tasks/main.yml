@@ -2,3 +2,4 @@
 
 - include: repo_config.yml
 - include: software.yml
+- include: software_postinstall.yml
