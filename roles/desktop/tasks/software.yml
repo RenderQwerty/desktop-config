@@ -2,8 +2,8 @@
 
  - name: install required packages
    apt:
-     name=: "{{ item }}"
-     state=installed
+     name: "{{ item }}"
+     state: installed
    with_items:
      - chromium-browser
      - qbittorrent
