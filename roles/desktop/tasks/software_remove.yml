@@ -1,0 +1,15 @@
+---
+
+- name: remove default packages
+  apt:
+   name: "{{ item }}"
+   state: absent
+   autoremove: yes
+  with_items:
+   - firefox
+   - gnome-mines
+   - gnome-sudoku
+   - parole
+   - sgt-puzzles
+   - transmission-common
+   - thunderbird
