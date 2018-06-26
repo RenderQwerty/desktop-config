@@ -1,3 +1,4 @@
 ---
 
 - include: software/main.yml
+- include: services/main.yml

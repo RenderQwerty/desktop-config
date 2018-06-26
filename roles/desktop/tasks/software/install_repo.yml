@@ -25,6 +25,7 @@
    - git
    - ulauncher
    - sierra-gtk-theme
+   - openssh-server
 
 # using command module because ansible doesnt have snap module yet
 - name: install telegram

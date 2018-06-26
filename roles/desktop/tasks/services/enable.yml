@@ -1,0 +1,7 @@
+---
+
+- name: enable ssh
+  service:
+    name: ssh
+    enabled: yes
+    state: restarted
