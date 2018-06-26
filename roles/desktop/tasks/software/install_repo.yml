@@ -15,12 +15,10 @@
    - virtualbox-guest-additions-iso
    - virtualbox-qt
    - virtualbox-dkms
-#   - skypeforlinux
    - zsh
    - zsh-common
    - vlc
    - snapd
-#   - slack-desktop
    - neofetch
    - conky-all
    - vagrant
@@ -28,5 +26,8 @@
    - ulauncher
 
 # using command module because ansible doesnt have snap module yet
-- name: install snap packages
+- name: install telegram
   command: snap install telegram-desktop --classic
+  
+- name: install slack
+  command: snap install slack --classic

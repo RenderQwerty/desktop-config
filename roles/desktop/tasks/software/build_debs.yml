@@ -17,3 +17,4 @@
    - binutils-dev
    - pkg-config
    - zlib1g-dev
+   - gdebi-core

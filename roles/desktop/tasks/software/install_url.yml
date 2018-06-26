@@ -1,0 +1,11 @@
+---
+
+- name: install skype
+  apt:
+    deb: https://go.skype.com/skypeforlinux-64.deb
+    state: present
+    
+- name: install teamviewer
+  apt:
+    deb: https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+    state: present
