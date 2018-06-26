@@ -1,0 +1,4 @@
+---
+
+ - name: Add conky config
+   copy: src={{ role_path }}/files/conky dest=/home/jaels/.config/ owner=jaels group=jaels
