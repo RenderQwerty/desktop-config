@@ -1,5 +1,11 @@
+- name: add keys
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: BC012ECBBC24D881
+    state: present
+
 - name: add ulauncher ppa
-  apt_repository: repo='ppa:agornostal/ulauncher' state=present update_cache=yes
+  apt_repository: repo='ppa:agornostal/ulauncher' state=present
 
 - name: Add repositories
   copy:
@@ -7,3 +13,7 @@
     dest: /etc/apt/sources.list.d
     owner: root
     group: root
+
+- name: update apt cache
+  apt:
+    update_cache: yes
