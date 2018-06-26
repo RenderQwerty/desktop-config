@@ -1,8 +1,19 @@
 ---
 
-- name: install required packages
+- name: install packages required for software compilation
   apt:
    name: "{{ item }}"
    state: present
   with_items:
    - cmake
+   - build-essential
+   - dkms
+   - libgcrypt11-dev
+   - libyajl-dev
+   - libboost-all-dev
+   - libcurl4-openssl-dev
+   - libexpat1-dev
+   - libcppunit-dev
+   - binutils-dev
+   - pkg-config
+   - zlib1g-dev

@@ -1,6 +1,6 @@
 ---
 
-- name: install required packages
+- name: install software
   apt:
    name: "{{ item }}"
    state: present
@@ -24,8 +24,6 @@
    - slack-desktop
    - neofetch
    - conky-all
-   - build-essential
-   - dkms
    - vagrant
    - git
    - ulauncher
