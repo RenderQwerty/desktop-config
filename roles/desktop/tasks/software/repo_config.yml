@@ -1,18 +1,22 @@
 - name: add keys
   apt_key:
     keyserver: keyserver.ubuntu.com
-    id: BC012ECBBC24D881
+    id: "{{ item }}"
     state: present
+  with_items:
+   - BC012ECBBC24D881
+   - 1F3045A5DF7587C3
+   - EB3E94ADBE1229CF
 
-- name: add ulauncher ppa
-  apt_repository: repo='ppa:agornostal/ulauncher' state=present
-
-- name: Add repositories
-  copy:
-    src: "{{ role_path }}/files/repositories/"
-    dest: /etc/apt/sources.list.d
-    owner: root
-    group: root
+- name: add all repositories
+  apt_repository:
+   repo: "{{ item }}"
+   state: present
+  with_items:
+   - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+   - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
+   - deb [arch=amd64] https://repo.skype.com/deb stable main
+   - ppa:agornostal/ulauncher
 
 - name: update apt cache
   apt:
