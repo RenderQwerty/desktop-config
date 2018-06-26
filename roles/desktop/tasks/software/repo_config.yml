@@ -1,5 +1,5 @@
 - name: add ulauncher ppa
   apt_repository: repo='ppa:agornostal/ulauncher' state=present update_cache=yes
 
-#- name: Add repositories
-#   copy: src="{{ role_path }}/files/repositories/" dest=/etc/apt/sources.list.d owner=root group=root
+- name: Add repositories
+   copy: src="{{ role_path }}/files/repositories/" dest=/etc/apt/sources.list.d owner=root group=root
