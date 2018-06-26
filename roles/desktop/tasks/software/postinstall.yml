@@ -1,5 +1,0 @@
----
-
-- name: configure_vscode
-  become: false
-  script: ../files/vscode/code.sh

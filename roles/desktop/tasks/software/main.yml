@@ -5,4 +5,3 @@
 - import_tasks: software/build_debs.yml
 - import_tasks: software/install_repo.yml
 - import_tasks: software/install_url.yml
-- import_tasks: software/postinstall.yml
