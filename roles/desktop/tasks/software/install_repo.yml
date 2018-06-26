@@ -24,6 +24,7 @@
    - vagrant
    - git
    - ulauncher
+   - sierra-gtk-theme
 
 # using command module because ansible doesnt have snap module yet
 - name: install telegram

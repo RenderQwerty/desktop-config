@@ -18,3 +18,4 @@
    - pkg-config
    - zlib1g-dev
    - gdebi-core
+   - gtk2-engines-pixbuf
