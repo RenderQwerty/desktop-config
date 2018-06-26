@@ -1,0 +1,7 @@
+---
+
+- name: config max user watches for inotify
+  lineinfile:
+    path: /proc/sys/fs/inotify/max_user_watches
+    line: 'fs.inotify.max_user_watches=524288'
+    state: present

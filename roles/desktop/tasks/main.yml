@@ -2,3 +2,4 @@
 
 - include: software/main.yml
 - include: services/main.yml
+- include: configuration/main.yml
