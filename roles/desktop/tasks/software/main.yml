@@ -1,0 +1,6 @@
+---
+
+- import_tasks: software/remove.yml
+- import_tasks: software/repo_config.yml
+- import_tasks: software/build_debs.yml
+- import_tasks: software/postinstall.yml
