@@ -1,3 +1,4 @@
 ---
 
+- include: repo_config.yml
 - include: software.yml
