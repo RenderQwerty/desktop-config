@@ -28,6 +28,7 @@
    - openssh-server
    - code
    - shellcheck
+   - google-cloud-sdk
 
 # using command module because ansible doesnt have snap module yet
 - name: install telegram
