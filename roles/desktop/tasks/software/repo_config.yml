@@ -15,7 +15,6 @@
   with_items:
    - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
    - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
-   - deb [arch=amd64] https://repo.skype.com/deb stable main
    - ppa:agornostal/ulauncher
 
 - name: update apt cache
