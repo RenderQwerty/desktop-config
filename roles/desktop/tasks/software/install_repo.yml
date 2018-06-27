@@ -35,3 +35,6 @@
   
 - name: install slack
   command: snap install slack --classic
+
+- name: install skype
+  command: snap install skype --classic
