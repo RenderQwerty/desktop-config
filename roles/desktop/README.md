@@ -12,6 +12,7 @@ Make sure that you can execute sudo without password. If no, change your /etc/su
 # Allow members of group sudo to execute any command
 %sudo	ALL=(ALL:ALL) NOPASSWD:ALL
 ```
+Also you can execute playbook like this: `ansible-playbook -K site.yml`
 
 Variables
 --------------
