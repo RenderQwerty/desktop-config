@@ -1,6 +1,7 @@
 ---
 
 - name: install packages required for software compilation
+  tags: deps
   apt:
    name: "{{ item }}"
    state: present

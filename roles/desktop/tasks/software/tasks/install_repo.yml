@@ -1,6 +1,7 @@
 ---
 
 - name: install software
+  tags: soft_repo
   apt:
    name: "{{ item }}"
    state: present
@@ -33,9 +34,12 @@
 # using command module because ansible doesnt have snap module yet
 - name: install telegram
   command: snap install telegram-desktop --classic
+  tags: soft_snap
   
 - name: install slack
   command: snap install slack --classic
+  tags: soft_snap
 
 - name: install skype
   command: snap install skype --classic
+  tags: soft_snap

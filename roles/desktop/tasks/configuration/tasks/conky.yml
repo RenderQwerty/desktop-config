@@ -1,0 +1,6 @@
+---
+- include_vars: main.yml
+
+- name: Add conky config
+   copy: src={{ role_path }}/files/conky dest=/home/{{ user }}/.config/ owner={{ user }} group={{ user }}
+  tags: conky

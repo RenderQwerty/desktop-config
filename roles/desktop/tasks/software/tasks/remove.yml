@@ -1,6 +1,7 @@
 ---
 
 - name: remove default packages
+  tags: remove
   apt:
    name: "{{ item }}"
    state: absent
@@ -15,3 +16,4 @@
    - thunderbird
    - pidgin
    - xterm
+

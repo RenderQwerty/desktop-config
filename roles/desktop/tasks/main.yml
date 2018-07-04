@@ -1,5 +1,5 @@
 ---
 
-- include: software/main.yml
-- include: services/main.yml
-- include: configuration/main.yml
+- include_tasks: software/main.yml
+- include_tasks: services/main.yml
+- include_tasks: configuration/main.yml

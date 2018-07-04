@@ -1,4 +1,5 @@
 - name: add keys
+  tags: repo
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
@@ -9,11 +10,14 @@
    - EB3E94ADBE1229CF
 
 - name: add keys from url
+  tags: repo
   apt_key:
    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
    state: present
 
+
 - name: add all repositories
+  tags: repo
   apt_repository:
    repo: "{{ item }}"
    state: present
@@ -22,6 +26,7 @@
    - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
    - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
    - ppa:agornostal/ulauncher
+
 
 - name: update apt cache
   apt:

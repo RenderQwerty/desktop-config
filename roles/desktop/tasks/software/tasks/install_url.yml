@@ -1,6 +1,7 @@
 ---
     
 - name: install from url's
+  tags: soft_url
   apt:
     deb: "{{ item }}"
     state: present

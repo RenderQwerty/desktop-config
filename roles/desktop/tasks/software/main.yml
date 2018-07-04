@@ -1,7 +1,8 @@
 ---
 
-- import_tasks: software/remove.yml
-- import_tasks: software/repo_config.yml
-- import_tasks: software/build_debs.yml
-- import_tasks: software/install_repo.yml
-- import_tasks: software/install_url.yml
+- include_tasks: tasks/remove.yml
+- include_tasks: tasks/repo_config.yml
+- include_tasks: tasks/build_debs.yml
+- include_tasks: tasks/install_repo.yml
+- include_tasks: tasks/install_url.yml
+#- include_tasks: tasks/pip.yml
