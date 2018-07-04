@@ -25,7 +25,7 @@ vars/main.yml
 Dependencies
 ------------
 
-No special dependencies
+No special dependencies needed
 
 Example Playbook
 ----------------
