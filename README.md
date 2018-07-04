@@ -41,12 +41,7 @@ Example of playbook
        - desktop
 ```
 
-License
--------
-
-MIT
-
 Author Information
 ------------------
-
-Author email - fisakov.root@gmail.com
+Maintanter - https://github.com/RenderQwerty
+Email - fisakov.root@gmail.com
