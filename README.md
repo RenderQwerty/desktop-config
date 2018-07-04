@@ -44,4 +44,5 @@ Example of playbook
 Author Information
 ------------------
 Maintanter - https://github.com/RenderQwerty
+
 Email - fisakov.root@gmail.com
