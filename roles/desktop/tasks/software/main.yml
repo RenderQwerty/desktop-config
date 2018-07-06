@@ -2,8 +2,7 @@
 
 - include_tasks: tasks/remove.yml
 - include_tasks: tasks/repo_config.yml
-- include_tasks: tasks/build_debs.yml
+- include_tasks: tasks/dependencies.yml
 - include_tasks: tasks/install.yml
-- include_tasks: tasks/install_url.yml
 - include_tasks: tasks/docker.yml
 #- include_tasks: tasks/pip.yml
