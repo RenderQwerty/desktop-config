@@ -8,3 +8,8 @@
 - name: Update Cache
   apt:
     update_cache: yes
+
+- name: Restart Ssh
+  service:
+    name: ssh
+    state: restarted
