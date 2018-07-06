@@ -8,13 +8,15 @@
    - BC012ECBBC24D881
    - 1F3045A5DF7587C3
    - EB3E94ADBE1229CF
+  notify: Update Cache
 
 - name: add keys from url
-  tags: repo
   apt_key:
-   url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+   url: "{{ item }}"
    state: present
-
+  with_items:
+    - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  tags: repo
 
 - name: add all repositories
   tags: repo
@@ -26,8 +28,6 @@
    - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
    - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
    - ppa:agornostal/ulauncher
+  notify: Update Cache
 
 
-- name: update apt cache
-  apt:
-    update_cache: yes

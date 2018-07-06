@@ -1,8 +1,0 @@
----
-
-- name: install from python-pip
-  tags: pip
-  pip:
-    name: "{{ item }}"
-  with_items:
-   - termtosvg

@@ -1,5 +1,10 @@
 ---
-# handlers file for desktop
 
- - name: Start Docker
-   service: name=docker state=started
+- name: Start Docker
+  service:
+    name: docker
+    state: started
+
+- name: Update Cache
+  apt:
+    update_cache: yes

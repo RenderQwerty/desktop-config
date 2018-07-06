@@ -20,3 +20,7 @@
    - zlib1g-dev
    - gdebi-core
    - gtk2-engines-pixbuf
+   - apt-transport-https
+   - ca-certificates
+   - software-properties-common
+   - curl

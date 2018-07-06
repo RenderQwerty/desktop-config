@@ -1,0 +1,32 @@
+---
+
+- name: Install Docker repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+    state: present
+  tags:
+    - soft
+    - docker
+  notify: Update Cache
+
+- name: Add docker repo key
+  apt_key:
+   url: https://download.docker.com/linux/ubuntu/gpg
+   state: present
+  tags: repo
+
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+    state: present
+  notify: Start Docker
+  tags:
+    - soft
+    - docker
+
+- name: add user to docker group
+  user:
+    name: "{{ username }}"
+    groups: docker
+    append: yes
