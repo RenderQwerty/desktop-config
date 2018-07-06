@@ -31,6 +31,7 @@
    - shellcheck
    - google-cloud-sdk
    - jq
+   - fonts-powerline
 
 - name: install soft from url's
   tags: soft
