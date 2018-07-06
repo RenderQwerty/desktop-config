@@ -1,7 +1,7 @@
 ---
 
 - include_tasks: tasks/remove.yml
-- include_tasks: tasks/repo_config.yml
+- include_tasks: tasks/repo.yml
 - include_tasks: tasks/dependencies.yml
 - include_tasks: tasks/install.yml
 - include_tasks: tasks/docker.yml
