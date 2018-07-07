@@ -1,0 +1,10 @@
+---
+
+- name: install python packages
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - pipenv
+    - virtualenv
+    - docker-compose
+    - flake8

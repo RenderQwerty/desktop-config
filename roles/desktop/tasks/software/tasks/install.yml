@@ -32,6 +32,7 @@
    - google-cloud-sdk
    - jq
    - fonts-powerline
+   - plank
 
 - name: install soft from url's
   tags: soft
