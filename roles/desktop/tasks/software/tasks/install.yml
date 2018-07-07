@@ -33,6 +33,7 @@
    - jq
    - fonts-powerline
    - plank
+   - asciinema
 
 - name: install soft from url's
   tags: soft

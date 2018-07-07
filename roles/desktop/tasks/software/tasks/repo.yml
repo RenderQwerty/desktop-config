@@ -4,7 +4,7 @@
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
     state: present
-  with_items:
+  loop:
    - BC012ECBBC24D881
    - 1F3045A5DF7587C3
    - EB3E94ADBE1229CF
@@ -14,7 +14,7 @@
   apt_key:
    url: "{{ item }}"
    state: present
-  with_items:
+  loop:
     - https://packages.cloud.google.com/apt/doc/apt-key.gpg
   tags: repo
 
@@ -23,12 +23,13 @@
   apt_repository:
    repo: "{{ item }}"
    state: present
-  with_items:
+  loop:
    - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
    - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
    - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
    - ppa:agornostal/ulauncher
    - ppa:ricotz/docky
+   - ppa:zanchey/asciinema
   notify: Update Cache
 
 
