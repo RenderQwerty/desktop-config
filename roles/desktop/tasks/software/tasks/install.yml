@@ -32,6 +32,8 @@
    - jq
    - fonts-powerline
    - plank
+   - asciinema
+   - openvpn
    - thunderbird
 
 - name: install soft from url's
