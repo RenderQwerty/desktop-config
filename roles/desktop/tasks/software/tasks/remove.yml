@@ -6,7 +6,7 @@
    name: "{{ item }}"
    state: absent
    autoremove: yes
-  with_items:
+  loop:
    - firefox
    - gnome-mines
    - gnome-sudoku

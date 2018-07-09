@@ -21,7 +21,6 @@
    - vlc
    - snapd
    - neofetch
-   - conky-all
    - vagrant
    - git
    - ulauncher
@@ -35,6 +34,7 @@
    - plank
    - asciinema
    - openvpn
+   - thunderbird
 
 - name: install soft from url's
   tags: soft

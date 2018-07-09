@@ -30,6 +30,5 @@
    - ppa:agornostal/ulauncher
    - ppa:ricotz/docky
    - ppa:zanchey/asciinema
+   - ppa:ubuntu-mozilla-security/ppa
   notify: Update Cache
-
-
