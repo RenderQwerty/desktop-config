@@ -3,7 +3,7 @@
 - name: install python packages
   pip:
     name: "{{ item }}"
-  with_items:
+  loop:
     - pipenv
     - virtualenv
     - docker-py

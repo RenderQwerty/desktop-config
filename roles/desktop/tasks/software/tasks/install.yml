@@ -32,13 +32,14 @@
    - jq
    - fonts-powerline
    - plank
+   - thunderbird
 
 - name: install soft from url's
   tags: soft
   apt:
     deb: "{{ item }}"
     state: present
-  with_items:
+  loop:
    - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
    - https://zoom.us/client/latest/zoom_amd64.deb
 
