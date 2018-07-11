@@ -33,6 +33,8 @@
    - fonts-powerline
    - plank
    - thunderbird
+   - tilix
+   - fireshot
 
 - name: install soft from url's
   tags: soft
