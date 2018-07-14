@@ -23,12 +23,4 @@
   apt_repository:
    repo: "{{ item }}"
    state: present
-  loop:
-   - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
-   - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
-   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
-   - ppa:agornostal/ulauncher
-   - ppa:ricotz/docky
-   - ppa:zanchey/asciinema
-   - ppa:ubuntu-mozilla-security/ppa
-  notify: Update Cache
+  loop: "{{ repo_list }}"
