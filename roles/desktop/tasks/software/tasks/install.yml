@@ -58,3 +58,7 @@
 - name: install skype
   command: snap install skype --classic
   tags: soft_snap
+
+- name: install remmina
+  command: snap install remmina
+  tags: soft_snap
