@@ -6,3 +6,9 @@
     name: fs.inotify.max_user_watches
     value: 524288
     state: present
+
+- name: config shell
+  tags: shell
+  user:
+    name: "{{ username }}"
+    shell: "/bin/zsh"
