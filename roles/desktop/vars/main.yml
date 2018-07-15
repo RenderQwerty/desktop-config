@@ -1,2 +1,88 @@
 ---
 username: jaels
+snap_list:
+  - telegram-desktop
+  - slack
+  - skype
+  - remmina
+  - postman
+
+install_from_url:
+  - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+  - https://zoom.us/client/latest/zoom_amd64.deb
+
+install_list:
+  - chromium-browser
+  - qbittorrent
+  - keepassx
+  - calibre
+  - vim
+  - virtualbox
+  - virtualbox-ext-pack
+  - virtualbox-guest-additions-iso
+  - virtualbox-qt
+  - virtualbox-dkms
+  - zsh
+  - zsh-common
+  - vlc
+  - snapd
+  - neofetch
+  - vagrant
+  - git
+  - ulauncher
+  - sierra-gtk-theme
+  - openssh-server
+  - code
+  - shellcheck
+  - google-cloud-sdk
+  - jq
+  - fonts-powerline
+  - asciinema
+  - openvpn
+  - thunderbird
+  - gnome-tweak-tool
+
+deps_list:
+  - cmake
+  - build-essential
+  - dkms
+  - libgcrypt11-dev
+  - libyajl-dev
+  - libboost-all-dev
+  - libcurl4-openssl-dev
+  - libexpat1-dev
+  - libcppunit-dev
+  - binutils-dev
+  - pkg-config
+  - zlib1g-dev
+  - gdebi-core
+  - gtk2-engines-pixbuf
+  - apt-transport-https
+  - ca-certificates
+  - software-properties-common
+  - curl
+  - gnome-themes-standard
+  - gtk2-engines-murrine
+
+repo_list:
+  - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+  - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
+  - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
+  - ppa:agornostal/ulauncher
+  - ppa:zanchey/asciinema
+  - ppa:ubuntu-mozilla-security/ppa
+
+python_packages:
+  - pipenv
+  - virtualenv
+  - docker-py
+  - flake8
+  - apache-libcloud
+  - paramiko
+  - PyYAML
+  - jinja2
+  - cryptography
+  - httplib2
+
+remove_list:
+  - firefox

@@ -1,62 +1,33 @@
 ---
+- name: install some system dependecies
+  tags: deps
+  apt:
+   name: "{{ item }}"
+   state: present
+  loop: "{{ deps_list }}"
 
 - name: install software from repository
   tags: soft
   apt:
    name: "{{ item }}"
    state: present
-  loop:
-   - chromium-browser
-   - qbittorrent
-   - keepassx
-   - calibre
-   - vim
-   - virtualbox
-   - virtualbox-ext-pack
-   - virtualbox-guest-additions-iso
-   - virtualbox-qt
-   - virtualbox-dkms
-   - zsh
-   - zsh-common
-   - vlc
-   - snapd
-   - neofetch
-   - vagrant
-   - git
-   - ulauncher
-   - sierra-gtk-theme
-   - openssh-server
-   - code
-   - shellcheck
-   - google-cloud-sdk
-   - jq
-   - fonts-powerline
-   - plank
-   - asciinema
-   - openvpn
-   - thunderbird
-   - tilix
-   - fireshot
+  loop: "{{ install_list }}"
+
 
 - name: install soft from url's
   tags: soft
   apt:
     deb: "{{ item }}"
     state: present
-  loop:
-   - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-   - https://zoom.us/client/latest/zoom_amd64.deb
+  loop: "{{ install_from_url }}"
 
-   
 # using command module because ansible doesnt have snap module yet
-- name: install telegram
-  command: snap install telegram-desktop --classic
-  tags: soft_snap
-  
-- name: install slack
-  command: snap install slack --classic
-  tags: soft_snap
+- name: install snap packages
+  command: "snap install {{ item }} --classic"
+  loop: "{{ snap_list }}"
+  tags: soft
 
-- name: install skype
-  command: snap install skype --classic
-  tags: soft_snap
+- name: install python packages
+  pip:
+    name: "{{ item }}"
+  loop: "{{ python_packages }}"

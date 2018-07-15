@@ -6,14 +6,4 @@
    name: "{{ item }}"
    state: absent
    autoremove: yes
-  loop:
-   - firefox
-   - gnome-mines
-   - gnome-sudoku
-   - parole
-   - sgt-puzzles
-   - transmission-common
-   - thunderbird
-   - pidgin
-   - xterm
-
+  loop: "{{ remove_list }}"

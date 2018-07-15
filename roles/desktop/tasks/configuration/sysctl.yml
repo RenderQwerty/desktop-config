@@ -1,9 +1,0 @@
----
-
-- name: config max user watches for inotify
-  tags: sysctl
-  sysctl:
-    name: fs.inotify.max_user_watches
-    value: 524288
-    state: present
-
