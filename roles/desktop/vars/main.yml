@@ -37,10 +37,10 @@ install_list:
   - google-cloud-sdk
   - jq
   - fonts-powerline
-  - plank
   - asciinema
   - openvpn
   - thunderbird
+  - gnome-tweak-tool
 
 deps_list:
   - cmake
@@ -61,13 +61,14 @@ deps_list:
   - ca-certificates
   - software-properties-common
   - curl
+  - gnome-themes-standard
+  - gtk2-engines-murrine
 
 repo_list:
   - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
   - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - ppa:agornostal/ulauncher
-  - ppa:ricotz/docky
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
 
@@ -85,11 +86,3 @@ python_packages:
 
 remove_list:
   - firefox
-  - gnome-mines
-  - gnome-sudoku
-  - parole
-  - sgt-puzzles
-  - transmission-common
-  - thunderbird
-  - pidgin
-  - xterm

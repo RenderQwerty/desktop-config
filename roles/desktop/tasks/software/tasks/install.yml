@@ -1,5 +1,5 @@
 ---
-- name: install packages required for software compilation
+- name: install some system dependecies
   tags: deps
   apt:
    name: "{{ item }}"
@@ -22,7 +22,7 @@
 
 # using command module because ansible doesnt have snap module yet
 - name: install snap packages
-  command: "snap install {{ item }}"
+  command: "snap install {{ item }} --classic"
   loop: "{{ snap_list }}"
   tags: soft
 
