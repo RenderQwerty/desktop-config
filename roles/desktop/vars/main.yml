@@ -41,6 +41,9 @@ install_list:
   - openvpn
   - thunderbird
   - gnome-tweak-tool
+  - chrome-gnome-shell
+  - ansible-lint
+  - pylint
 
 deps_list:
   - cmake
