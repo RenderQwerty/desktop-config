@@ -1,7 +1,7 @@
 Ubuntu desktop configuration
 =========
 
-Role for custom ubuntu_18.10 configuration
+Role for custom ubuntu_18.04 configuration
 
 Requirements
 ------------
