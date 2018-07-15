@@ -44,6 +44,7 @@ install_list:
   - chrome-gnome-shell
   - ansible-lint
   - pylint
+  - flameshot
 
 deps_list:
   - cmake
