@@ -12,7 +12,7 @@
    name: "{{ item }}"
    state: present
   loop: "{{ install_list }}"
-
+  notify: Enable Libvirt
 
 - name: install soft from url's
   tags: soft

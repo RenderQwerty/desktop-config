@@ -45,6 +45,12 @@ install_list:
   - ansible-lint
   - pylint
   - flameshot
+  - qemu-kvm
+  - libvirt-clients
+  - libvirt-daemon-system
+  - bridge-utils
+  - virt-manager
+  - virtinst
 
 deps_list:
   - cmake

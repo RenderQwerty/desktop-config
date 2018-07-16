@@ -7,8 +7,8 @@
     value: 524288
     state: present
 
-- name: config shell
-  tags: shell
+- name: config user
+  tags: user
   user:
     name: "{{ username }}"
     shell: "/bin/zsh"

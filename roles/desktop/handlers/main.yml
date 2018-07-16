@@ -13,3 +13,9 @@
   service:
     name: ssh
     state: restarted
+
+- name: Enable Libvirt
+  service:
+    name: livirtd
+    state: started
+    enabled: yes
