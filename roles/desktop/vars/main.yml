@@ -68,6 +68,7 @@ deps_list:
   - curl
   - gnome-themes-standard
   - gtk2-engines-murrine
+  - dconf-editor
 
 repo_list:
   - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
@@ -88,6 +89,7 @@ python_packages:
   - jinja2
   - cryptography
   - httplib2
+  - trytravis
 
 remove_list:
   - firefox
