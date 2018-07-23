@@ -14,14 +14,15 @@
    url: https://download.docker.com/linux/ubuntu/gpg
    state: present
   tags: repo
-  notify: Update Cache
 
 
 - name: Install Docker
   apt:
     name: docker-ce
     state: present
-  notify: Start Docker
+  notify:
+    - Update Cache
+    - Start Docker
   tags:
     - soft
     - docker

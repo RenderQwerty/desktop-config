@@ -9,7 +9,6 @@ snap_list:
   - google-play-music-desktop-player
 
 install_from_url:
-  - https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
   - https://zoom.us/client/latest/zoom_amd64.deb
 
 install_list:
@@ -43,8 +42,6 @@ install_list:
   - thunderbird
   - gnome-tweak-tool
   - chrome-gnome-shell
-  - ansible-lint
-  - pylint
   - flameshot
 
 deps_list:
@@ -79,6 +76,7 @@ repo_list:
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
+  - deb http://linux.teamviewer.com/deb stable main
 
 python_packages:
   - pipenv
@@ -92,6 +90,8 @@ python_packages:
   - cryptography
   - httplib2
   - trytravis
+  - ansible-lint
+  - pylint
 
 remove_list:
   - firefox
