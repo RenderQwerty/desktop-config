@@ -69,6 +69,8 @@ deps_list:
   - gnome-themes-standard
   - gtk2-engines-murrine
   - dconf-editor
+  - network-manager-l2tp
+  - network-manager-l2tp-gnome
 
 repo_list:
   - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
