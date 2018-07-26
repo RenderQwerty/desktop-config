@@ -70,6 +70,7 @@ deps_list:
   - network-manager-l2tp-gnome
   - inotify-tools
   - debhelper
+  - firewalld
 
 repo_list:
   - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
