@@ -1,5 +1,6 @@
 - src: geerlingguy.pip
 - src: geerlingguy.docker
+- src: andrewrothstein.docker-machine
 - src: geerlingguy.ansible-role-packer
 - src: geerlingguy.git
 - src: andrewrothstein.terraform

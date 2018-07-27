@@ -34,5 +34,6 @@
     - geerlingguy.ansible-role-packer 
     - andrewrothstein.terraform
     - geerlingguy.docker 
+    - andrewrothstein.docker-machine
     - desktop
     - gantsign.oh-my-zsh 
