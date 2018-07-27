@@ -1,7 +1,7 @@
 Ubuntu desktop configuration
 =========
 
-Role for custom ubuntu_18.04 configuration
+Ansible role for custom  18.04 configuration
 
 Requirements
 ------------
