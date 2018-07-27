@@ -10,8 +10,9 @@
 - name: config user
   tags: user
   user:
-    name: "{{ username }}"
+    name: "{{ item.username }}"
     shell: "/bin/zsh"
+  loop: "{{ users }}"
 
 - name: config .ssh folder permissions
   file:
@@ -25,4 +26,3 @@
     mode: 0644
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
-

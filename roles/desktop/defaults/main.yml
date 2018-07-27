@@ -1,11 +1,9 @@
 ---
-username: jaels
 snap_list:
   - telegram-desktop
   - slack
   - skype
   - remmina
-  - postman
   - google-play-music-desktop-player
 
 install_from_url:
@@ -24,11 +22,7 @@ install_list:
   - virtualbox-dkms
   - zsh
   - zsh-common
-  - vlc
   - snapd
-  - neofetch
-  - vagrant
-  - git
   - ulauncher
   - sierra-gtk-theme
   - openssh-server
@@ -41,8 +35,8 @@ install_list:
   - openvpn
   - thunderbird
   - gnome-tweak-tool
+  - gnome-shell-extension-appindicator
   - chrome-gnome-shell
-  - flameshot
 
 deps_list:
   - cmake
@@ -73,28 +67,11 @@ deps_list:
   - firewalld
 
 repo_list:
-  - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
   - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
-  - deb http://linux.teamviewer.com/deb stable main
-
-python_packages:
-  - pipenv
-  - virtualenv
-  - docker-py
-  - flake8
-  - apache-libcloud
-  - paramiko
-  - PyYAML
-  - jinja2
-  - cryptography
-  - httplib2
-  - trytravis
-  - ansible-lint
-  - pylint
 
 remove_list:
   - firefox

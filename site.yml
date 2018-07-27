@@ -4,5 +4,35 @@
   hosts: localhost
   connection: local
   become: yes
+  vars:
+    username: jaels
+    users:
+      - username: jaels
+    packer_version: "1.2.5"
+    ntp_timezone: Europe/Kiev
+    pip_install_packages:
+      - name: docker
+      - name: pipenv
+      - name: virtualenv
+      - name: docker-py
+      - name: flake8
+      - name: apache-libcloud
+      - name: paramiko
+      - name: PyYAML
+      - name: jinja2
+      - name: cryptography
+      - name: httplib2
+      - name: trytravis
+      - name: ansible-lint
+      - name: pylint
+      - name: molecule
+
   roles:
-   - desktop
+    - geerlingguy.pip
+    - geerlingguy.git
+    - geerlingguy.ntp
+    - geerlingguy.ansible-role-packer 
+    - andrewrothstein.terraform
+    - geerlingguy.docker 
+    - desktop
+    - gantsign.oh-my-zsh 

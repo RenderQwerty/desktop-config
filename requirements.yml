@@ -1,0 +1,8 @@
+- src: geerlingguy.pip
+- src: geerlingguy.docker
+- src: geerlingguy.ansible-role-packer
+- src: geerlingguy.git
+- src: andrewrothstein.terraform
+- src: geerlingguy.ntp
+- src: geerlingguy.ansible-role-packer
+- src: gantsign.oh-my-zsh
