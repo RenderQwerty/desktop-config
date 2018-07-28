@@ -34,6 +34,7 @@ install_list:
   - exfat-fuse
   - exfat-utils
   - asciinema
+  - digikam
   - openvpn
   - thunderbird
   - gnome-tweak-tool
