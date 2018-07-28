@@ -31,6 +31,8 @@ install_list:
   - google-cloud-sdk
   - jq
   - fonts-powerline
+  - exfat-fuse
+  - exfat-utils
   - asciinema
   - openvpn
   - thunderbird
