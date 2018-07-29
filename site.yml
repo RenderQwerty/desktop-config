@@ -15,7 +15,6 @@
       - name: docker
       - name: pipenv
       - name: virtualenv
-      - name: docker-py
       - name: flake8
       - name: apache-libcloud
       - name: paramiko
@@ -35,8 +34,9 @@
     - geerlingguy.ntp
     - geerlingguy.ansible-role-packer 
     - andrewrothstein.terraform
-    - renderqwerty.ansible_galaxy_vagrant 
+    - renderqwerty.ansible_vagrant
     - geerlingguy.docker 
     - andrewrothstein.docker-machine
     - desktop
     - gantsign.oh-my-zsh 
+    - renderqwerty.ansible_galaxy_hadolint
