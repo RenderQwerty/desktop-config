@@ -26,6 +26,7 @@
       - name: ansible-lint
       - name: pylint
       - name: molecule
+      - name: pycrypto
 
   roles:
     - geerlingguy.pip
