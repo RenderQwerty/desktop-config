@@ -33,6 +33,7 @@
     - geerlingguy.ntp
     - geerlingguy.ansible-role-packer 
     - andrewrothstein.terraform
+    - renderqwerty.ansible_galaxy_vagrant 
     - geerlingguy.docker 
     - andrewrothstein.docker-machine
     - desktop

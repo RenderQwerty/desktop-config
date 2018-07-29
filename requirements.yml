@@ -4,6 +4,7 @@
 - src: geerlingguy.ansible-role-packer
 - src: geerlingguy.git
 - src: andrewrothstein.terraform
+- src: renderqwerty.ansible_galaxy_vagrant
 - src: geerlingguy.ntp
 - src: geerlingguy.ansible-role-packer
 - src: gantsign.oh-my-zsh
