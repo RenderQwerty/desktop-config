@@ -9,6 +9,7 @@
     users:
       - username: jaels
     packer_version: "1.2.5"
+    vagrant_version: 2.1.2
     ntp_timezone: Europe/Kiev
     pip_install_packages:
       - name: docker
