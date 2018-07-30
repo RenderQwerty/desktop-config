@@ -67,8 +67,6 @@ deps_list:
   - inotify-tools
   - debhelper
   - firewalld
-  - haskell-platform
-  - haskell-stack
 
 repo_list:
   - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
