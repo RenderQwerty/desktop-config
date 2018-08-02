@@ -6,6 +6,9 @@ snap_list:
   - remmina
   - google-play-music-desktop-player
 
+gem_list:
+  - travis
+
 install_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
 

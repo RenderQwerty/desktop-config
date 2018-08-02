@@ -25,3 +25,9 @@
   command: "snap install {{ item }} --classic"
   loop: "{{ snap_list }}"
   tags: soft
+
+- name: install ruby gems
+  gem:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ gem_list }}"
