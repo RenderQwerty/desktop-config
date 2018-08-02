@@ -31,3 +31,10 @@
     name: "{{ item }}"
     state: latest
   loop: "{{ gem_list }}"
+
+- name: install tflint
+  unarchive:
+    src: "{{ tflint }}"
+    remote_src: yes
+    dest: /usr/local/sbin
+    mode: 0755
