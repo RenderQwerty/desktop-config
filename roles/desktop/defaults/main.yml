@@ -71,9 +71,9 @@ deps_list:
   - network-manager-l2tp-gnome
   - inotify-tools
   - debhelper
-  - firewalld
   - ruby
   - ruby-dev
+  - sshpass
 
 repo_list:
   - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
