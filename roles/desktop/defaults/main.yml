@@ -55,6 +55,7 @@ deps_list:
   - libcurl4-openssl-dev
   - libexpat1-dev
   - libcppunit-dev
+  - libxml2-dev
   - binutils-dev
   - pkg-config
   - zlib1g-dev
@@ -81,7 +82,6 @@ repo_list:
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
-  - ppa:nilarimogard/webupd8
 
 remove_list:
   - firefox
