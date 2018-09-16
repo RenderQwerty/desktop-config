@@ -44,6 +44,7 @@ install_list:
   - gnome-shell-extension-appindicator
   - chrome-gnome-shell
   - woeusb
+  - gnome-shell-pomodoro
 
 deps_list:
   - cmake
