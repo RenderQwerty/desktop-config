@@ -16,7 +16,6 @@ install_from_url:
 install_list:
   - chromium-browser
   - qbittorrent
-  - keepassx
   - calibre
   - vim
   - virtualbox
@@ -44,6 +43,8 @@ install_list:
   - gnome-shell-extension-appindicator
   - chrome-gnome-shell
   - woeusb
+  - keepass2
+  - keepassx
 
 deps_list:
   - cmake
