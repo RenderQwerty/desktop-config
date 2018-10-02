@@ -45,6 +45,7 @@ install_list:
   - woeusb
   - keepass2
   - keepassx
+  - speedtest-cli
 
 deps_list:
   - cmake
