@@ -27,7 +27,6 @@ install_list:
   - zsh-common
   - snapd
   - ulauncher
-  - sierra-gtk-theme
   - openssh-server
   - code
   - shellcheck
@@ -80,7 +79,6 @@ deps_list:
   - sshpass
 
 repo_list:
-  - deb http://ppa.launchpad.net/dyatlov-igor/sierra-theme/ubuntu bionic main
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
