@@ -46,6 +46,7 @@ install_list:
   - keepass2
   - keepassx
   - speedtest-cli
+  - tmux
 
 deps_list:
   - cmake
