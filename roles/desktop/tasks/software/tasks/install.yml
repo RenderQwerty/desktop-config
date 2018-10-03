@@ -32,6 +32,13 @@
     state: latest
   loop: "{{ gem_list }}"
 
+- name: copy bin from web
+  get_url:
+    name: "{{ item }}"
+    dest: /usr/local/bin/
+    mode: 0755
+  loop: "{{ copy_from_web_list }}"
+
 - name: install tflint
   unarchive:
     src: "{{ tflint }}"

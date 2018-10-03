@@ -86,3 +86,6 @@ repo_list:
 
 remove_list:
   - firefox
+
+copy_from_web_list:
+  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
