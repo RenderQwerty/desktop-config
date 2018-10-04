@@ -5,7 +5,6 @@ snap_list:
   - slack
   - skype
   - remmina
-  - google-play-music-desktop-player
 
 gem_list:
   - travis
