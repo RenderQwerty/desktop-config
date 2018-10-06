@@ -45,6 +45,7 @@ install_list:
   - keepassx
   - speedtest-cli
   - tmux
+  - kubectl
 
 deps_list:
   - cmake
@@ -79,6 +80,7 @@ deps_list:
 
 repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
+  - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
