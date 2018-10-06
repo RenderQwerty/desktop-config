@@ -2,15 +2,15 @@
 - name: install some system dependecies
   tags: deps
   apt:
-   name: "{{ item }}"
-   state: present
+    name: "{{ item }}"
+    state: present
   loop: "{{ deps_list }}"
 
 - name: install software from repository
   tags: soft
   apt:
-   name: "{{ item }}"
-   state: present
+    name: "{{ item }}"
+    state: present
   loop: "{{ install_list }}"
 
 - name: install soft from url's
@@ -18,7 +18,7 @@
   apt:
     deb: "{{ item }}"
     state: present
-  loop: "{{ install_from_url }}"
+  loop: "{{ deb_from_url }}"
 
 # using command module because ansible doesnt have snap module yet
 - name: install snap packages
@@ -32,12 +32,12 @@
     state: latest
   loop: "{{ gem_list }}"
 
-- name: copy bin from web
+- name: install bin from web
   get_url:
     url: "{{ item }}"
     dest: /usr/local/bin/
     mode: 0755
-  loop: "{{ copy_from_web_list }}"
+  loop: "{{ bin_from_url }}"
 
 - name: install tflint
   unarchive:

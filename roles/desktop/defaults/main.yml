@@ -9,7 +9,7 @@ snap_list:
 gem_list:
   - travis
 
-install_from_url:
+deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
 
 install_list:
@@ -88,5 +88,5 @@ repo_list:
 remove_list:
   - firefox
 
-copy_from_web_list:
+bin_from_url:
   - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
