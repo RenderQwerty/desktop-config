@@ -26,3 +26,8 @@
     mode: 0644
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
+
+- name: gitconfig
+  template:
+    src: .gitconfig.j2
+    dest: "/home/{{ username }}/.gitconfig"

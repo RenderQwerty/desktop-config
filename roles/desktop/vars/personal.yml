@@ -1,0 +1,8 @@
+---
+
+username: jaels
+git_fullname: "Yurii Fisakov"
+git_email: "fisakov.root@gmail.com"
+users:
+  - username: jaels
+ntp_timezone: Europe/Kiev
