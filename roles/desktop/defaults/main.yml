@@ -1,10 +1,14 @@
 ---
-tflint: 'https://github.com/wata727/tflint/releases/download/v0.7.1/tflint_linux_amd64.zip'
+
+tflint: 'https://github.com/wata727/tflint/releases/download/v0.7.2/tflint_linux_amd64.zip'
 snap_list:
   - telegram-desktop
   - slack
   - skype
   - remmina
+
+packer_version: 1.3.1
+vagrant_version: 2.1.5
 
 gem_list:
   - travis
@@ -40,7 +44,6 @@ install_list:
   - gnome-tweak-tool
   - gnome-shell-extension-appindicator
   - chrome-gnome-shell
-  - woeusb
   - keepass2
   - keepassx
   - speedtest-cli
@@ -84,6 +87,23 @@ repo_list:
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
+
+pip_install_packages:
+  - name: docker
+  - name: pipenv
+  - name: virtualenv
+  - name: flake8
+  - name: apache-libcloud
+  - name: paramiko
+  - name: PyYAML
+  - name: jinja2
+  - name: cryptography
+  - name: httplib2
+  - name: trytravis
+  - name: ansible-lint
+  - name: pylint
+  - name: molecule
+  - name: pycrypto
 
 remove_list:
   - firefox

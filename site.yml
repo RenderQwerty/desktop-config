@@ -4,30 +4,7 @@
   hosts: localhost
   connection: local
   become: yes
-  vars:
-    username: jaels
-    users:
-      - username: jaels
-    packer_version: "1.2.5"
-    vagrant_version: 2.1.2
-    ntp_timezone: Europe/Kiev
-    pip_install_packages:
-      - name: docker
-      - name: pipenv
-      - name: virtualenv
-      - name: flake8
-      - name: apache-libcloud
-      - name: paramiko
-      - name: PyYAML
-      - name: jinja2
-      - name: cryptography
-      - name: httplib2
-      - name: trytravis
-      - name: ansible-lint
-      - name: pylint
-      - name: molecule
-      - name: pycrypto
-
+  vars_files: [ 'roles/desktop/vars/personal.yml' ]
   roles:
     - geerlingguy.pip
     - geerlingguy.git
