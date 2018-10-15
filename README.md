@@ -7,9 +7,9 @@ Requirements
 ------------
 
 
-Execute script which install depenceies: `./init.sh`
+Execute script which install dependencies: `./init.sh`
 
-Then execute playbook like this: `ansible-playbook -K site.yml`
+And when its done - execute playbook like this: `ansible-playbook -K site.yml`
 
 
 Author Information
