@@ -19,6 +19,7 @@ deb_from_url:
 install_list:
   - chromium-browser
   - qbittorrent
+  - xterm
   - calibre
   - vim
   - virtualbox
