@@ -26,10 +26,10 @@ install_list:
   - virtualbox-guest-additions-iso
   - virtualbox-qt
   - virtualbox-dkms
-  - zsh
-  - zsh-common
   - snapd
   - ulauncher
+  - gnome-system-monitor
+  - gnome-calculator
   - openssh-server
   - code
   - shellcheck
