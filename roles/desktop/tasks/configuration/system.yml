@@ -1,0 +1,7 @@
+---
+
+- name: Lock orientation
+  command: gsettings set org.gnome.settings-daemon.peripherals.touchscreen orientation-lock true
+
+- name: Disable screen rotation
+  command: gsettings set org.gnome.settings-daemon.plugins.orientation active false
