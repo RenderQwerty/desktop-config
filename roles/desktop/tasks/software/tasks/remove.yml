@@ -1,9 +1,11 @@
 ---
 
 - name: remove default packages
-  tags: remove
   apt:
-   name: "{{ item }}"
-   state: absent
-   autoremove: yes
+    name: "{{ item }}"
+    state: absent
+    autoremove: yes
   loop: "{{ remove_list }}"
+
+- name: remove snap packages
+  shell: snap remove gnome-system-monitor && snap remove gnome-calculator
