@@ -15,6 +15,7 @@ gem_list:
 
 deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
+  - https://prerelease.keybase.io/keybase_amd64.deb
 
 install_list:
   - chromium-browser
