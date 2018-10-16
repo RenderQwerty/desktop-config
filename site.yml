@@ -15,6 +15,6 @@
     - geerlingguy.docker 
     - andrewrothstein.docker-machine
     - desktop
-    - gantsign.oh-my-zsh 
     - renderqwerty.ansible_galaxy_hadolint
     - andrewrothstein.go
+    - dotstrap.fish
