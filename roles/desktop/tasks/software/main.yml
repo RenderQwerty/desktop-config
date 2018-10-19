@@ -1,4 +1,5 @@
 ---
+- include_tasks: tasks/repo.yml
 - include_tasks: tasks/install.yml
 - include_tasks: tasks/remove.yml
-- include_tasks: tasks/repo.yml
+
