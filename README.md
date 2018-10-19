@@ -9,7 +9,7 @@ Requirements
 
 Execute script which install dependencies: `./init.sh`
 
-And when its done - execute playbook like this: `ansible-playbook -K site.yml`
+And when its done - execute playbook like this: `ansible-playbook -K site.yml --ask-vault-pass`
 
 
 Author Information
