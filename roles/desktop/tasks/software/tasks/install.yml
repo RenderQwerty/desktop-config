@@ -45,3 +45,13 @@
     remote_src: yes
     dest: /usr/local/sbin
     mode: 0755
+
+- name: download gofish
+  get_url:
+    url: https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh
+    dest: /tmp/gofish_installer.sh
+    mode: 0755
+- name: install gofish
+  shell: /tmp/gofish_installer.sh
+- name: install helm
+  shell: gofish install helm
