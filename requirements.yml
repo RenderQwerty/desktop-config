@@ -11,3 +11,4 @@
 - src: renderqwerty.ansible_galaxy_hadolint
 - src: andrewrothstein.go
 - src: mashimom.oh-my-zsh
+- src: andrewrothstein.kubernetes-helm
