@@ -1,26 +1,20 @@
 - name: add keys
-  tags: repo
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
     state: present
-  loop:
-   - BC012ECBBC24D881
-   - 1F3045A5DF7587C3
-   - EB3E94ADBE1229CF
-  notify: Update Cache
+  loop: "{{ apt_key_list }}"
+
 
 - name: add keys from url
   apt_key:
-   url: "{{ item }}"
-   state: present
-  loop:
-    - https://packages.cloud.google.com/apt/doc/apt-key.gpg
-  tags: repo
+    url: "{{ item }}"
+    state: present
+  loop: "{{ gpg_key_list }}"
 
 - name: add all repositories
-  tags: repo
   apt_repository:
-   repo: "{{ item }}"
-   state: present
+    repo: "{{ item }}"
+    state: present
   loop: "{{ repo_list }}"
+  notify: Update Cache

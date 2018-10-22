@@ -13,6 +13,15 @@ vagrant_version: 2.2.0
 gem_list:
   - travis
 
+apt_key_list:
+  - 379CE192D401AB61
+  - EB3E94ADBE1229CF
+  - 1F3045A5DF7587C3
+  - BC012ECBBC24D881
+
+gpg_key_list:
+  - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+
 deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
   - https://prerelease.keybase.io/keybase_amd64.deb
@@ -51,6 +60,7 @@ install_list:
   - speedtest-cli
   - tmux
   - kubectl
+  - etcher-electron
 
 deps_list:
   - cmake
@@ -86,6 +96,7 @@ deps_list:
 repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
+  - deb https://deb.etcher.io stable etcher
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
