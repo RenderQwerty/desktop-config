@@ -12,6 +12,7 @@ vagrant_version: 2.2.0
 
 gem_list:
   - travis
+  - bropages
 
 apt_key_list:
   - 379CE192D401AB61
