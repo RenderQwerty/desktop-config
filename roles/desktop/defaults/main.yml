@@ -12,6 +12,7 @@ vagrant_version: 2.2.0
 
 gem_list:
   - travis
+  - bropages
 
 apt_key_list:
   - 379CE192D401AB61
@@ -24,7 +25,6 @@ gpg_key_list:
 
 deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
-  - https://prerelease.keybase.io/keybase_amd64.deb
 
 install_list:
   - chromium-browser

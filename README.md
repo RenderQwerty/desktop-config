@@ -6,11 +6,7 @@ Ansible role with multiple dependecies for custom ubuntu 18.04 configuration
 Requirements
 ------------
 
-
-Execute script which install dependencies: `./init.sh`
-
-And when its done - execute playbook like this: `ansible-playbook -K site.yml --ask-vault-pass`
-
+Execute script which install all dependencies and run this playbook: `make install`
 
 Author Information
 ------------
