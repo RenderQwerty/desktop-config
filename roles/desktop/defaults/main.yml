@@ -61,6 +61,7 @@ install_list:
   - tmux
   - kubectl
   - etcher-electron
+  - lynx
 
 deps_list:
   - cmake
