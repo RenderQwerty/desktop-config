@@ -62,6 +62,7 @@ install_list:
   - kubectl
   - etcher-electron
   - lynx
+  - woeusb
 
 deps_list:
   - cmake
@@ -101,6 +102,7 @@ repo_list:
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:ubuntu-mozilla-security/ppa
+  - ppa:nilarimogard/webupd8
 
 pip_install_packages:
   - name: docker
