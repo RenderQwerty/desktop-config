@@ -64,6 +64,7 @@ install_list:
   - remmina
   - remmina-plugin-rdp
   - libfreerdp-plugins-standard
+  - mtpaint
 
 deps_list:
   - cmake
