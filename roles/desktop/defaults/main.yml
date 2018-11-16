@@ -52,6 +52,7 @@ install_list:
   - openvpn
   - thunderbird
   - gnome-tweak-tool
+  - pantheon-terminal
   - gnome-shell-extension-appindicator
   - chrome-gnome-shell
   - keepass2
@@ -107,6 +108,7 @@ repo_list:
   - ppa:ubuntu-mozilla-security/ppa
   - ppa:nilarimogard/webupd8
   - ppa:remmina-ppa-team/remmina-next
+  - ppa:elementary-os/daily
 
 pip_install_packages:
   - name: docker
