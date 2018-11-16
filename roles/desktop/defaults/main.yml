@@ -130,6 +130,7 @@ pip_install_packages:
 remove_list:
   - firefox
   - geary
+  - gnome-terminal
   - nautilus
 
 bin_from_url:
