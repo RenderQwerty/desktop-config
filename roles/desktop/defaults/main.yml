@@ -35,6 +35,7 @@ install_list:
   - virtualbox-guest-additions-iso
   - virtualbox-qt
   - virtualbox-dkms
+  - dolphin
   - snapd
   - ulauncher
   - gnome-system-monitor
