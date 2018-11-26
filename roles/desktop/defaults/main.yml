@@ -67,6 +67,8 @@ install_list:
   - remmina-plugin-rdp
   - libfreerdp-plugins-standard
   - mtpaint
+  - podman
+  - cri-o
 
 deps_list:
   - cmake
@@ -109,6 +111,7 @@ repo_list:
   - ppa:nilarimogard/webupd8
   - ppa:remmina-ppa-team/remmina-next
   - ppa:elementary-os/daily
+  - ppa:projectatomic/ppa
 
 pip_install_packages:
   - name: docker
