@@ -67,6 +67,7 @@ install_list:
   - remmina-plugin-rdp
   - libfreerdp-plugins-standard
   - mtpaint
+  - guake
 
 deps_list:
   - cmake
