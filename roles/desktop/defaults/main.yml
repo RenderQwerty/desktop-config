@@ -68,7 +68,6 @@ install_list:
   - libfreerdp-plugins-standard
   - mtpaint
   - podman
-  - cri-o
   - guake
 
 deps_list:
