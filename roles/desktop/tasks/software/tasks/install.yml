@@ -20,10 +20,16 @@
     state: present
   loop: "{{ deb_from_url }}"
 
+# stub for ansible 2.8
+#- name: install snap packages
+#  snap:
+#    name: "{{ item }}"
+#    classic: yes
+#  loop: "{{ snap_list }}"
+
+# using command module because ansible doesnt have snap module yet
 - name: install snap packages
-  snap:
-    name: "{{ item }}"
-    classic: yes
+  command: "snap install {{ item }} --classic"
   loop: "{{ snap_list }}"
 
 - name: install ruby gems
