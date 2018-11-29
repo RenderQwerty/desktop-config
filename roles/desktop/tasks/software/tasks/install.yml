@@ -20,11 +20,11 @@
     state: present
   loop: "{{ deb_from_url }}"
 
-# using command module because ansible doesnt have snap module yet
 - name: install snap packages
-  command: "snap install {{ item }} --classic"
+  snap:
+    name: "{{ item }}"
+    classic: yes
   loop: "{{ snap_list }}"
-  tags: soft
 
 - name: install ruby gems
   gem:
