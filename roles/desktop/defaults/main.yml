@@ -68,6 +68,7 @@ install_list:
   - libfreerdp-plugins-standard
   - mtpaint
   - podman
+  - buildah
   - guake
 
 deps_list:
@@ -131,7 +132,6 @@ pip_install_packages:
   - name: pycrypto
 
 remove_list:
-  - firefox
   - geary
   - gnome-terminal
   - nautilus

@@ -39,3 +39,9 @@
   lineinfile:
     path: "/home/{{ username }}/.zshrc"
     line: "source <(kubectl completion zsh)"
+
+- name: populate update script
+  copy:
+    src: update.sh
+    dest: "/home/{{ username }}/"
+    mode: 0755
