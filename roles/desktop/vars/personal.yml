@@ -4,5 +4,6 @@ username: jaels
 git_fullname: "Yurii Fisakov"
 git_email: "fisakov.root@gmail.com"
 users:
-  - username: jaels
+  - username: "{{ username }}"
 ntp_timezone: Europe/Kiev
+gnome_user: "{{ username }}"
