@@ -139,3 +139,11 @@ remove_list:
 
 bin_from_url:
   - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
+
+gnome_gsettings:
+  - schema: org.gnome.settings-daemon.plugins.orientation
+    key: active
+    value: '"false"'
+  - schema: org.gnome.settings-daemon.peripherals.touchscreen
+    key: orientation-lock
+    value: '"true"'
