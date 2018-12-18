@@ -1,2 +1,0 @@
-setuptools
-ansible>=2.7.0
