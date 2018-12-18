@@ -42,7 +42,6 @@ install_list:
   - keepass2
   - keepassx
   - speedtest-cli
-  - tmux
   - kubectl
   - etcher-electron
   - lynx
@@ -53,6 +52,7 @@ install_list:
 #  - podman
 #  - buildah
   - guake
+  - telegram-desktop
 
 deps_list:
   - cmake
@@ -77,7 +77,6 @@ deps_list:
   - gtk2-engines-murrine
   - dconf-editor
   - network-manager-l2tp
-#  - network-manager-l2tp-gnome
   - inotify-tools
   - debhelper
   - ruby
