@@ -78,6 +78,7 @@ deps_list:
   - dconf-editor
   - network-manager-l2tp
   - network-manager-l2tp-gnome
+  - libstrongswan-extra-plugins
   - inotify-tools
   - debhelper
   - ruby
