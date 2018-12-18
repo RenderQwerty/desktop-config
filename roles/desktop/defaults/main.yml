@@ -49,6 +49,7 @@ install_list:
   - remmina-plugin-rdp
   - libfreerdp-plugins-standard
   - mtpaint
+  - mailnag
 #  - podman
 #  - buildah
   - guake
@@ -89,11 +90,13 @@ repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
+  - ppa:pulb/mailnag
 #  - ppa:agornostal/ulauncher
 #  - ppa:zanchey/asciinema
 #  - ppa:ubuntu-mozilla-security/ppa
 #  - ppa:nilarimogard/webupd8
 #  - ppa:remmina-ppa-team/remmina-next
+
 
 pip_install_packages:
   - name: docker
