@@ -1,5 +1,11 @@
 ---
 - include_tasks: tasks/repo.yml
 - include_tasks: tasks/install.yml
-- include_tasks: tasks/remove.yml
+
+- name: remove default packages
+  apt:
+    name: "{{ item }}"
+    state: absent
+    autoremove: yes
+  loop: "{{ remove_list }}"
 

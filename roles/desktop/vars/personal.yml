@@ -6,4 +6,3 @@ git_email: "fisakov.root@gmail.com"
 users:
   - username: "{{ username }}"
 ntp_timezone: Europe/Kiev
-gnome_user: "{{ username }}"
