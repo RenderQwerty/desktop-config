@@ -30,7 +30,7 @@ install_list:
   - virtualbox-guest-additions-iso
   - virtualbox-qt
   - virtualbox-dkms
-  - ulauncher
+#  - ulauncher
   - openssh-server
   - code
   - shellcheck
@@ -90,7 +90,7 @@ repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
-  - ppa:pulb/mailnag
+#  - ppa:pulb/mailnag
 #  - ppa:agornostal/ulauncher
 #  - ppa:zanchey/asciinema
 #  - ppa:ubuntu-mozilla-security/ppa
