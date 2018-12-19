@@ -12,9 +12,17 @@
     state: present
   loop: "{{ gpg_key_list }}"
 
-- name: add all repositories
+- name: add classic repositories
   apt_repository:
     repo: "{{ item }}"
     state: present
   loop: "{{ repo_list }}"
+  notify: Update Cache
+
+- name: add ppa repositories
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    codename: bionic
+  loop: "{{ repo_list_ppa }}"
   notify: Update Cache
