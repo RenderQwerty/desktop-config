@@ -27,23 +27,18 @@
 #    classic: yes
 #  loop: "{{ snap_list }}"
 
-# using command module because ansible doesnt have snap module yet
-- name: install snap packages
-  command: "snap install {{ item }} --classic"
-  loop: "{{ snap_list }}"
-
 - name: install ruby gems
   gem:
     name: "{{ item }}"
     state: latest
   loop: "{{ gem_list }}"
 
-- name: install bin from web
-  get_url:
-    url: "{{ item }}"
-    dest: /usr/local/bin/
-    mode: 0755
-  loop: "{{ bin_from_url }}"
+#- name: install bin from web
+#  get_url:
+#    url: "{{ item }}"
+#    dest: /usr/local/bin/
+#    mode: 0755
+#  loop: "{{ bin_from_url }}"
 
 - name: install tflint
   unarchive:
@@ -51,11 +46,3 @@
     remote_src: yes
     dest: /usr/local/sbin
     mode: 0755
-
-- name: download gofish
-  get_url:
-    url: https://raw.githubusercontent.com/fishworks/gofish/master/scripts/install.sh
-    dest: /tmp/gofish_installer.sh
-    mode: 0755
-- name: install gofish
-  shell: /tmp/gofish_installer.sh

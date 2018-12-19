@@ -1,7 +1,7 @@
 Ubuntu desktop configuration
 =========
 
-Ansible role with multiple dependecies for custom ubuntu 18.04 configuration
+Ansible role with multiple dependecies for custom linux mint configuration
 
 Requirements
 ------------

@@ -1,11 +1,8 @@
 ---
 
 tflint: 'https://github.com/wata727/tflint/releases/download/v0.7.2/tflint_linux_amd64.zip'
-snap_list:
-  - telegram-desktop
-  - skype
 
-packer_version: 1.3.2
+packer_version: 1.3.3
 vagrant_version: 2.2.2
 
 gem_list:
@@ -26,9 +23,6 @@ deb_from_url:
   - https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.3-amd64.deb
 
 install_list:
-  - chromium-browser
-  - qbittorrent
-  - xterm
   - calibre
   - vim
   - virtualbox
@@ -36,11 +30,7 @@ install_list:
   - virtualbox-guest-additions-iso
   - virtualbox-qt
   - virtualbox-dkms
-  - dolphin
-  - snapd
   - ulauncher
-  - gnome-system-monitor
-  - gnome-calculator
   - openssh-server
   - code
   - shellcheck
@@ -49,28 +39,21 @@ install_list:
   - fonts-powerline
   - exfat-fuse
   - exfat-utils
-  - asciinema
-  - openvpn
-  - thunderbird
-  - gnome-tweak-tool
-  - pantheon-terminal
-  - gnome-shell-extension-appindicator
-  - chrome-gnome-shell
   - keepass2
   - keepassx
   - speedtest-cli
-  - tmux
   - kubectl
   - etcher-electron
   - lynx
-  - woeusb
   - remmina
   - remmina-plugin-rdp
   - libfreerdp-plugins-standard
   - mtpaint
+  - mailnag
 #  - podman
 #  - buildah
   - guake
+  - telegram-desktop
 
 deps_list:
   - cmake
@@ -92,11 +75,11 @@ deps_list:
   - ca-certificates
   - software-properties-common
   - curl
-  - gnome-themes-standard
   - gtk2-engines-murrine
   - dconf-editor
   - network-manager-l2tp
   - network-manager-l2tp-gnome
+  - libstrongswan-extra-plugins
   - inotify-tools
   - debhelper
   - ruby
@@ -107,13 +90,13 @@ repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
-  - ppa:agornostal/ulauncher
-  - ppa:zanchey/asciinema
-  - ppa:ubuntu-mozilla-security/ppa
-  - ppa:nilarimogard/webupd8
-  - ppa:remmina-ppa-team/remmina-next
-  - ppa:elementary-os/daily
-#  - ppa:projectatomic/ppa
+#  - ppa:pulb/mailnag
+#  - ppa:agornostal/ulauncher
+#  - ppa:zanchey/asciinema
+#  - ppa:ubuntu-mozilla-security/ppa
+#  - ppa:nilarimogard/webupd8
+#  - ppa:remmina-ppa-team/remmina-next
+
 
 pip_install_packages:
   - name: docker
@@ -133,17 +116,8 @@ pip_install_packages:
   - name: pycrypto
 
 remove_list:
-  - geary
-  - gnome-terminal
-  - nautilus
+  - gimp
+  - hexchat
 
-bin_from_url:
-  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
-
-gnome_gsettings:
-  - schema: org.gnome.settings-daemon.plugins.orientation
-    key: active
-    value: '"false"'
-  - schema: org.gnome.settings-daemon.peripherals.touchscreen
-    key: orientation-lock
-    value: '"true"'
+#bin_from_url:
+#  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
