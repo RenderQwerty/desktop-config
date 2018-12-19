@@ -9,6 +9,9 @@
     - ansible_os_family: Debian
     - ansible_distribution: Ubuntu
     - ansible_distribution_release: bionic
+    - ansible_lsb_id: ubuntu
+    - ansible_lsb_codename: bionic
+
   roles:
     - geerlingguy.pip
     - geerlingguy.git
