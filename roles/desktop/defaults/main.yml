@@ -20,7 +20,6 @@ gpg_key_list:
 
 deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
-  - https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.3-amd64.deb
 
 install_list:
   - calibre
@@ -50,10 +49,9 @@ install_list:
   - libfreerdp-plugins-standard
   - mtpaint
   - mailnag
-#  - podman
-#  - buildah
   - guake
   - telegram-desktop
+  - slack-desktop
 
 deps_list:
   - cmake
@@ -90,12 +88,14 @@ repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
-#  - ppa:pulb/mailnag
-#  - ppa:agornostal/ulauncher
-#  - ppa:zanchey/asciinema
-#  - ppa:ubuntu-mozilla-security/ppa
-#  - ppa:nilarimogard/webupd8
-#  - ppa:remmina-ppa-team/remmina-next
+  - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+
+repo_list_ppa:
+  - ppa:pulb/mailnag
+  - ppa:agornostal/ulauncher
+  - ppa:zanchey/asciinema
+  - ppa:nilarimogard/webupd8
+  - ppa:remmina-ppa-team/remmina-next
 
 
 pip_install_packages:
