@@ -1,3 +1,5 @@
+---
+
 - name: add keys
   apt_key:
     keyserver: keyserver.ubuntu.com
@@ -17,7 +19,6 @@
     repo: "{{ item }}"
     state: present
   loop: "{{ repo_list }}"
-  notify: Update Cache
 
 - name: add ppa repositories
   apt_repository:

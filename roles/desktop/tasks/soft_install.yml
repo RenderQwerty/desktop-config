@@ -1,17 +1,14 @@
 ---
 - name: install some system dependecies
-  tags: deps
   apt:
-    name: "{{ item }}"
+    name: "{{ deps_list }}"
     state: present
-  loop: "{{ deps_list }}"
 
 - name: install software from repository
   tags: soft
   apt:
-    name: "{{ item }}"
-    state: present
-  loop: "{{ install_list }}"
+    name: "{{ install_list }}"
+    state: latest
 
 - name: install soft from url's
   tags: soft
@@ -46,3 +43,10 @@
     remote_src: yes
     dest: /usr/local/sbin
     mode: 0755
+
+- name: remove default packages
+  apt:
+    name: "{{ item }}"
+    state: absent
+    autoremove: yes
+  loop: "{{ remove_list }}"

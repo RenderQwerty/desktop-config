@@ -17,6 +17,7 @@ apt_key_list:
 
 gpg_key_list:
   - https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  - https://www.virtualbox.org/download/oracle_vbox_2016.asc
 
 deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
@@ -24,7 +25,7 @@ deb_from_url:
 install_list:
   - calibre
   - vim
-  - virtualbox
+  - virtualbox-6.0
   - virtualbox-ext-pack
   - virtualbox-guest-additions-iso
   - virtualbox-qt
@@ -89,6 +90,7 @@ repo_list:
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
   - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+  - deb https://download.virtualbox.org/virtualbox/debian bionic contrib
 
 repo_list_ppa:
   - ppa:pulb/mailnag
