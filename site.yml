@@ -12,7 +12,6 @@
 
   roles:
     - geerlingguy.pip
-    - geerlingguy.git
     - geerlingguy.ntp
     - geerlingguy.ansible-role-packer 
     - andrewrothstein.terraform

@@ -49,6 +49,7 @@ install_list:
   - guake
   - telegram-desktop
   - slack-desktop
+  - boot-repair
 
 deps_list:
   - cmake
@@ -91,11 +92,13 @@ repo_list:
   - deb https://download.virtualbox.org/virtualbox/debian bionic contrib
 
 repo_list_ppa:
+  - ppa:ansible/ansible
   - ppa:pulb/mailnag
   - ppa:agornostal/ulauncher
   - ppa:zanchey/asciinema
   - ppa:nilarimogard/webupd8
   - ppa:remmina-ppa-team/remmina-next
+  - ppa:yannubuntu/boot-repair
 
 
 pip_install_packages:
