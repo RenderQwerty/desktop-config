@@ -50,6 +50,7 @@ install_list:
   - telegram-desktop
   - slack-desktop
   - boot-repair
+  - woeusb
 
 deps_list:
   - cmake
