@@ -28,6 +28,7 @@
     src: ssh/
     dest: /home/{{ username }}/.ssh/
     owner: "{{ username }}"
+    group: "{{ username }}"
 
 - name: config .ssh folder permissions
   file:
@@ -35,12 +36,14 @@
     path: ~/.ssh
     mode: 0700
     owner: "{{ username }}"
+    group: "{{ username }}"
 
 - name: config ssh keys permissions
   file:
     path: "{{ item }}"
     mode: 0644
     owner: "{{ username }}"
+    group: "{{ username }}"
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
 
@@ -50,6 +53,7 @@
     create: yes
     line: "source <(kubectl completion zsh)"
     owner: "{{ username }}"
+    group: "{{ username }}"
 
 - name: populate update script
   copy:
@@ -57,3 +61,4 @@
     dest: "/home/{{ username }}/"
     mode: 0755
     owner: "{{ username }}"
+    group: "{{ username }}"
