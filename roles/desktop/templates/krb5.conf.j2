@@ -1,0 +1,27 @@
+[libdefaults]
+        default_realm = {{ kerberos_domain|upper }}
+        dns_lookup_kdc = true
+        dns_lookup_realm = false
+        default_tkt_enctypes = aes256-cts-hmac-sha1-96 rc4-hmac des-cbc-crc des-cbc-md5
+        default_tgs_enctypes = aes256-cts-hmac-sha1-96 rc4-hmac des-cbc-crc des-cbc-md5
+        permitted_enctypes = aes256-cts-hmac-sha1-96 rc4-hmac des-cbc-crc des-cbc-md5
+        kdc_timesync = 1
+        ccache_type = 4
+        forwardable = true
+        proxiable = true
+        fcc-mit-ticketflags = true
+
+[realms]
+        {{ kerberos_domain|upper }} = {
+                kdc = s1-dc01.{{ kerberos_domain }}
+                kdc = s1-dc02.{{ kerberos_domain }}
+                default_domain = {{ kerberos_domain|upper }}
+                admin_server = s1-dc01.{{ kerberos_domain }}
+        }
+[domain_realm]
+        .{{ kerberos_domain }} = {{ kerberos_domain|upper }}
+        {{ kerberos_domain }} = {{ kerberos_domain|upper }}
+
+[login]
+        krb4_convert = false
+        krb4_get_tickets = false

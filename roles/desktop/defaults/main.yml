@@ -3,27 +3,24 @@
 tflint: 'https://github.com/wata727/tflint/releases/download/v0.7.2/tflint_linux_amd64.zip'
 
 packer_version: 1.3.3
-vagrant_version: 2.2.2
-
-gem_list:
-  - travis
-  - bropages
+vagrant_version: 2.2.3
 
 apt_key_list:
   - 379CE192D401AB61
   - EB3E94ADBE1229CF
   - 1F3045A5DF7587C3
   - BC012ECBBC24D881
+  - C6ABDCF64DB9A0B2 #slack
 
 gpg_key_list:
   - https://packages.cloud.google.com/apt/doc/apt-key.gpg
   - https://www.virtualbox.org/download/oracle_vbox_2016.asc
+  - https://dl-ssl.google.com/linux/linux_signing_key.pub
 
 deb_from_url:
   - https://zoom.us/client/latest/zoom_amd64.deb
 
 install_list:
-  - calibre
   - vim
   - virtualbox-6.0
   - ulauncher
@@ -35,7 +32,6 @@ install_list:
   - fonts-powerline
   - exfat-fuse
   - exfat-utils
-  - keepass2
   - keepassx
   - speedtest-cli
   - kubectl
@@ -84,23 +80,26 @@ deps_list:
   - sshpass
   - nfs-common
   - nfs-kernel-server
+  - python-dev
+  - libkrb5-dev
+  - krb5-user
 
 repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
-  - deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
-  - deb https://download.virtualbox.org/virtualbox/debian bionic contrib
+  - deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib
+  - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+  - deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+  - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
 
 repo_list_ppa:
   - ppa:ansible/ansible
   - ppa:pulb/mailnag
   - ppa:agornostal/ulauncher
-  - ppa:zanchey/asciinema
   - ppa:nilarimogard/webupd8
   - ppa:remmina-ppa-team/remmina-next
   - ppa:yannubuntu/boot-repair
-
 
 pip_install_packages:
   - name: docker
@@ -118,6 +117,10 @@ pip_install_packages:
   - name: pylint
   - name: molecule
   - name: pycrypto
+  - name: "pywinrm[kerberos]"
+  - name: "pywinrm[credssp]"
+  - name: "requests-credssp"
+  - name: "requests-kerberos"
 
 remove_list:
   - gimp

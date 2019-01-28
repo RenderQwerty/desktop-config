@@ -1,21 +1,24 @@
 ---
-- name: install some system dependecies
-  apt:
-    name: "{{ deps_list }}"
-    state: present
 
-- name: install software from repository
-  tags: soft
+- name: install software
   apt:
-    name: "{{ install_list }}"
-    state: latest
+    name: "{{ item }}"
+  loop:
+    - "{{ deps_list }}"
+    - "{{ install_list }}"
+
 
 - name: install soft from url's
-  tags: soft
   apt:
     deb: "{{ item }}"
     state: present
   loop: "{{ deb_from_url }}"
+
+
+- name: python modules
+  pip:
+    name: "{{ item.name }}"
+  loop: "{{ pip_install_packages }}"
 
 # stub for ansible 2.8
 #- name: install snap packages
@@ -24,11 +27,6 @@
 #    classic: yes
 #  loop: "{{ snap_list }}"
 
-- name: install ruby gems
-  gem:
-    name: "{{ item }}"
-    state: latest
-  loop: "{{ gem_list }}"
 
 #- name: install bin from web
 #  get_url:
