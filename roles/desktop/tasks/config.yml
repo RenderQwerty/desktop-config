@@ -44,6 +44,7 @@
 - name: config group membership
   user:
     name: "{{ username }}"
+    append: yes
     groups:
         - vboxusers
         - vboxsf
