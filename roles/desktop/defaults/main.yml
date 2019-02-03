@@ -22,10 +22,11 @@ install_list:
 #  - etcher-electron
   - lynx
   - remmina
-  - guake
+  - tilix
   - telegram-desktop
   - VirtualBox
   - WoeUSB
+  - gnome-tweak-tool
 
 deps_list:
   - NetworkManager-l2tp-gnome
