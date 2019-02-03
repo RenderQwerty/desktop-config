@@ -1,0 +1,4 @@
+- name: create git for git-projects
+  file:
+    path: "/home/{{ username }}/git-projects"
+    state: directory

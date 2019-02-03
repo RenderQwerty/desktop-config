@@ -49,6 +49,7 @@
         - vboxusers
         - vboxsf
         - docker
+        - input
 
 - name: enable fstrim
   systemd:

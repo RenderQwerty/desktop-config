@@ -35,3 +35,10 @@
     name: "{{ item }}"
     state: absent
   loop: "{{ remove_list }}"
+
+
+
+- name: setup libinput for touchpad support
+  git:
+    repo: https://github.com/bulletmark/libinput-gestures.git
+    dest: "/home/{{ username }}/git-projects/libinput-gestures"
