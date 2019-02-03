@@ -1,5 +1,4 @@
 ---
 
-- include_tasks: soft_repo.yml
 - include_tasks: soft_install.yml
 - include_tasks: config.yml

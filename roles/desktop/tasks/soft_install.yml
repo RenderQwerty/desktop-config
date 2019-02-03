@@ -1,31 +1,19 @@
 ---
 
 - name: install software
-  apt:
+  dnf:
     name: "{{ item }}"
   loop:
     - "{{ deps_list }}"
     - "{{ install_list }}"
-
-
-- name: install soft from url's
-  apt:
-    deb: "{{ item }}"
-    state: present
-  loop: "{{ deb_from_url }}"
-
+    - "{{ rpm_from_url }}"
 
 - name: python modules
   pip:
     name: "{{ item.name }}"
+    extra_args: --user
   loop: "{{ pip_install_packages }}"
-
-# stub for ansible 2.8
-#- name: install snap packages
-#  snap:
-#    name: "{{ item }}"
-#    classic: yes
-#  loop: "{{ snap_list }}"
+  become_user: "{{ username }}"
 
 
 #- name: install bin from web
@@ -43,8 +31,7 @@
     mode: 0755
 
 - name: remove default packages
-  apt:
+  dnf:
     name: "{{ item }}"
     state: absent
-    autoremove: yes
   loop: "{{ remove_list }}"

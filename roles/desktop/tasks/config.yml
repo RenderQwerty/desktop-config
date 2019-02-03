@@ -6,12 +6,6 @@
     value: "524288"
     state: present
 
-- name: config user
-  user:
-    name: "{{ item.username }}"
-    shell: "/bin/zsh"
-  loop: "{{ users }}"
-
 - name: gitconfig
   template:
     src: .gitconfig.j2
@@ -47,18 +41,21 @@
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
 
-- name: populate zsh config
-  lineinfile:
-    path: "/home/{{ username }}/.zshrc"
-    create: yes
-    line: "source <(kubectl completion zsh)"
-    owner: "{{ username }}"
-    group: "{{ username }}"
+- name: config group membership
+  user:
+    name: "{{ username }}"
+    groups:
+        - vboxusers
+        - vboxsf
+        - docker
 
-- name: populate update script
-  copy:
-    src: update.sh
-    dest: "/home/{{ username }}/"
-    mode: 0755
-    owner: "{{ username }}"
-    group: "{{ username }}"
+- name: enable fstrim
+  systemd:
+    name: fstrim.timer
+    enabled: yes
+
+- name: mask services
+  systemd:
+    name: "{{ item }}"
+    masked: yes
+  loop: "{{ disabled_units }}"
