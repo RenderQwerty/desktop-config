@@ -70,7 +70,7 @@ pip_install_packages:
 
 remove_list:
   - firefox
-  - rhytmbox
+  - rhythmbox
   - simple-scan
 
 disabled_units:
