@@ -11,9 +11,10 @@
     src: krb5.conf.j2
     dest: /etc/krb5.conf
 
-- name: config group membership
+- name: config user parameters
   user:
     name: "{{ username }}"
+    shell: /usr/bin/fish
     append: yes
     groups:
         - vboxusers
