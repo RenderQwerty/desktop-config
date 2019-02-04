@@ -7,9 +7,14 @@ rpm_from_url:
   - https://zoom.us/client/latest/zoom_x86_64.rpm
   - https://downloads.slack-edge.com/linux_releases/slack-3.3.7-0.1.fc21.x86_64.rpm
 
+repo_rpm_list:
+  - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-29.noarch.rpm
+  - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-29.noarch.rpm
+
 install_list:
   - vim
   - code
+  - google-chrome-stable
   - ShellCheck
   - powertop
 #  - google-cloud-sdk
@@ -19,7 +24,6 @@ install_list:
   - keepassx
   - speedtest-cli
 #  - kubectl
-#  - etcher-electron
   - lynx
   - remmina
   - tilix
@@ -27,8 +31,11 @@ install_list:
   - VirtualBox
   - WoeUSB
   - gnome-tweak-tool
+  - slack
+  - fish
 
 deps_list:
+  - fedora-workstation-repositories
   - NetworkManager-l2tp-gnome
   - gcc
   - kernel-devel

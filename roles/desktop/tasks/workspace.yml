@@ -2,3 +2,34 @@
   file:
     path: "/home/{{ username }}/git-projects"
     state: directory
+
+- name: gitconfig
+  template:
+    src: .gitconfig.j2
+    dest: "/home/{{ username }}/.gitconfig"
+    owner: "{{ username }}"
+
+- name: ssh_config
+  copy:
+    src: ssh/
+    dest: /home/{{ username }}/.ssh/
+    owner: "{{ username }}"
+    group: "{{ username }}"
+
+- name: config .ssh folder permissions
+  file:
+    state: directory
+    path: ~/.ssh
+    mode: 0700
+    owner: "{{ username }}"
+    group: "{{ username }}"
+
+- name: config ssh keys permissions
+  file:
+    path: "{{ item }}"
+    mode: 0644
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  with_fileglob:
+    - "/home/{{ username }}/.ssh/*.pub"
+
