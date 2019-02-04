@@ -23,7 +23,6 @@ install_list:
   - powerline-fonts
   - keepassx
   - speedtest-cli
-#  - kubectl
   - lynx
   - remmina
   - tilix
@@ -34,6 +33,7 @@ install_list:
   - slack
   - fish
   - kubectl
+  - google-cloud-sdk
 
 deps_list:
   - fedora-workstation-repositories

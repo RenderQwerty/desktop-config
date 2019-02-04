@@ -34,3 +34,9 @@
     name: Kubernetes
     description: k8s
     baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+
+- name: add google cloud sdk
+  yum_repository:
+    name: gcloudsdk
+    baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+    description: Google Cloud SDK
