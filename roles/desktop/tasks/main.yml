@@ -1,5 +1,6 @@
 ---
 
-- include_tasks: soft_repo.yml
+- include_tasks: workspace.yml
+- include_tasks: repo.yml
 - include_tasks: soft_install.yml
 - include_tasks: config.yml

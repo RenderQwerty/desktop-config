@@ -5,4 +5,3 @@ git_fullname: "Yurii Fisakov"
 git_email: "fisakov.root@gmail.com"
 users:
   - username: "{{ username }}"
-ntp_timezone: Europe/Kiev
