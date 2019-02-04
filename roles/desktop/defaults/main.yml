@@ -17,7 +17,6 @@ install_list:
   - google-chrome-stable
   - ShellCheck
   - powertop
-#  - google-cloud-sdk
   - jq
   - powerline
   - powerline-fonts
