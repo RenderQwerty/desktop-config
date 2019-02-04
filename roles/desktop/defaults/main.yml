@@ -33,6 +33,7 @@ install_list:
   - gnome-tweak-tool
   - slack
   - fish
+  - kubectl
 
 deps_list:
   - fedora-workstation-repositories
