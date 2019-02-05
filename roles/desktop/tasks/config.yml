@@ -32,3 +32,14 @@
     name: "{{ item }}"
     masked: yes
   loop: "{{ disabled_units }}"
+
+
+- name: setup dotfiles
+  block:
+    - git:
+        repo: https://github.com/RenderQwerty/dotfiles.git
+        dest: "/home/{{ username }}/.dotfiles"
+    - shell: stow *
+      args:
+        chdir: "/home/{{ username }}/.dotfiles"
+  become_user: "{{ username }}"

@@ -35,6 +35,7 @@ install_list:
   - zsh-syntax-highlighting
   - kubectl
   - google-cloud-sdk
+  - stow
 
 deps_list:
   - fedora-workstation-repositories
@@ -58,6 +59,8 @@ deps_list:
   - python2-devel
   - xdotool
   - wmctrl
+  - xclip
+  - xsel
 
 pip_install_packages:
   - name: docker
