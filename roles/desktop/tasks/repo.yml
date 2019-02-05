@@ -23,12 +23,6 @@
     description: Visual Studio Code
     baseurl: https://packages.microsoft.com/yumrepos/vscode
 
-- name: add fish shell repo
-  yum_repository:
-    name: fish
-    description: fish shell
-    baseurl: https://download.opensuse.org/repositories/shells:fish:release:3/Fedora_29/shells:fish:release:3.repo
-
 - name: add k8s repo
   yum_repository:
     name: Kubernetes
