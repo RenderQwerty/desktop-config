@@ -30,7 +30,9 @@ install_list:
   - WoeUSB
   - gnome-tweak-tool
   - slack
-  - fish
+  - zsh
+  - vim-syntastic-zsh
+  - zsh-syntax-highlighting
   - kubectl
   - google-cloud-sdk
 

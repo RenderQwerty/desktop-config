@@ -14,7 +14,7 @@
 - name: config user parameters
   user:
     name: "{{ username }}"
-    shell: /usr/bin/fish
+    shell: /usr/bin/zsh
     append: yes
     groups:
         - vboxusers
