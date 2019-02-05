@@ -34,12 +34,26 @@
   loop: "{{ disabled_units }}"
 
 
-- name: setup dotfiles
+- name: setup dotfiles & shell
   block:
-    - git:
+    - name: dotfiles
+      git:
         repo: https://github.com/RenderQwerty/dotfiles.git
         dest: "/home/{{ username }}/.dotfiles"
-    - shell: stow *
+
+    - name: autosuggestions
+      git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions
+        dest: "/home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
+    - name: syntax highlight
+      git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: "/home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+    - name: stow links
+      shell: stow *
       args:
         chdir: "/home/{{ username }}/.dotfiles"
+
   become_user: "{{ username }}"
