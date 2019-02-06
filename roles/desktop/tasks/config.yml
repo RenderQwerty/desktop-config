@@ -50,7 +50,7 @@
   block:
     - name: dotfiles
       git:
-        repo: ssh://git@github.com/renderqwerty/dotfiles.git
+        repo: https://github.com/RenderQwerty/dotfiles.git
         dest: "/home/{{ username }}/.dotfiles"
 
     - name: autosuggestions

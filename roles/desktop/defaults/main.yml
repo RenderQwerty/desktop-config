@@ -74,8 +74,6 @@ deps_list:
   - libstrongswan-extra-plugins
   - inotify-tools
   - debhelper
-  - ruby
-  - ruby-dev
   - sshpass
   - nfs-common
   - nfs-kernel-server
