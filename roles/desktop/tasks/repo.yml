@@ -34,3 +34,7 @@
     name: gcloudsdk
     baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
     description: Google Cloud SDK
+    gpgkey: "{{ item }}"
+  loop:
+    - https://packages.cloud.google.com/yum/doc/yum-key.gpg
+    - https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg

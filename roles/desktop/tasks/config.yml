@@ -38,7 +38,7 @@
   block:
     - name: dotfiles
       git:
-        repo: https://github.com/RenderQwerty/dotfiles.git
+        repo: git@github.com:RenderQwerty/dotfiles.git
         dest: "/home/{{ username }}/.dotfiles"
 
     - name: autosuggestions
