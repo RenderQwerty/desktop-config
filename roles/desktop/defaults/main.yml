@@ -2,8 +2,7 @@
 
 tflint: 'https://github.com/wata727/tflint/releases/download/v0.7.2/tflint_linux_amd64.zip'
 
-packer_version: 1.3.3
-vagrant_version: 2.2.3
+packer_version: 1.3.4
 
 apt_key_list:
   - 379CE192D401AB61
@@ -23,18 +22,16 @@ deb_from_url:
 install_list:
   - vim
   - virtualbox-6.0
-  - ulauncher
   - openssh-server
-  - code
   - shellcheck
   - google-cloud-sdk
+  - powertop
   - jq
   - fonts-powerline
   - exfat-fuse
   - exfat-utils
   - keepassx
   - speedtest-cli
-  - kubectl
   - etcher-electron
   - lynx
   - remmina
@@ -42,11 +39,12 @@ install_list:
   - libfreerdp-plugins-standard
   - mtpaint
   - mailnag
-  - guake
   - telegram-desktop
   - slack-desktop
-  - boot-repair
+  - google-chrome-stable
   - woeusb
+  - zsh
+  - gnome-tweak-tool
 
 deps_list:
   - cmake
@@ -63,6 +61,7 @@ deps_list:
   - pkg-config
   - zlib1g-dev
   - gdebi-core
+  - stow
   - gtk2-engines-pixbuf
   - apt-transport-https
   - ca-certificates
@@ -83,15 +82,16 @@ deps_list:
   - python-dev
   - libkrb5-dev
   - krb5-user
+  - gnome-shell-extension-tilix-dropdown
 
 repo_list:
   - deb http://packages.cloud.google.com/apt cloud-sdk-bionic main
   - deb http://apt.kubernetes.io/ kubernetes-xenial main
   - deb https://deb.etcher.io stable etcher
   - deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bionic contrib
-  - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+#  - deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   - deb [arch=amd64] https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
-  - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+#  - deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
 
 repo_list_ppa:
   - ppa:ansible/ansible
@@ -123,8 +123,4 @@ pip_install_packages:
   - name: "requests-kerberos"
 
 remove_list:
-  - gimp
-  - hexchat
-
-#bin_from_url:
-#  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
+  - geary

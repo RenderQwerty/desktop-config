@@ -20,14 +20,6 @@
     name: "{{ item.name }}"
   loop: "{{ pip_install_packages }}"
 
-# stub for ansible 2.8
-#- name: install snap packages
-#  snap:
-#    name: "{{ item }}"
-#    classic: yes
-#  loop: "{{ snap_list }}"
-
-
 #- name: install bin from web
 #  get_url:
 #    url: "{{ item }}"

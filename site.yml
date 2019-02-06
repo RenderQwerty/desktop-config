@@ -5,21 +5,13 @@
   connection: local
   become: yes
   vars_files: [ 'roles/desktop/vars/personal.yml' ]
-  vars:
-    - ansible_os_family: Debian
-    - ansible_distribution: Ubuntu
-    - ansible_distribution_release: bionic
 
   roles:
-    - geerlingguy.pip
-    - geerlingguy.ntp
-    - geerlingguy.ansible-role-packer 
     - andrewrothstein.terraform
     - andrewrothstein.kubernetes-helm
-    - renderqwerty.ansible_vagrant
-    - geerlingguy.docker 
-    - andrewrothstein.docker-machine
+    - andrewrothstein.vagrant
+    - geerlingguy.ansible-role-packer 
+    - geerlingguy.docker
     - desktop
-    - gantsign.oh-my-zsh 
     - renderqwerty.ansible_galaxy_hadolint
     - andrewrothstein.go

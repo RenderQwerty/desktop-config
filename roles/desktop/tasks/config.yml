@@ -8,9 +8,8 @@
 
 - name: config user
   user:
-    name: "{{ item.username }}"
-    shell: "/bin/zsh"
-  loop: "{{ users }}"
+    name: "{{ username }}"
+    shell: "/usr/bin/zsh"
 
 - name: gitconfig
   template:
@@ -47,18 +46,26 @@
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
 
-- name: populate zsh config
-  lineinfile:
-    path: "/home/{{ username }}/.zshrc"
-    create: yes
-    line: "source <(kubectl completion zsh)"
-    owner: "{{ username }}"
-    group: "{{ username }}"
+- name: setup dotfiles & shell
+  block:
+    - name: dotfiles
+      git:
+        repo: ssh://git@github.com/renderqwerty/dotfiles.git
+        dest: "/home/{{ username }}/.dotfiles"
 
-- name: populate update script
-  copy:
-    src: update.sh
-    dest: "/home/{{ username }}/"
-    mode: 0755
-    owner: "{{ username }}"
-    group: "{{ username }}"
+    - name: autosuggestions
+      git:
+        repo: https://github.com/zsh-users/zsh-autosuggestions
+        dest: "/home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+
+    - name: syntax highlight
+      git:
+        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+        dest: "/home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+
+    - name: stow links
+      shell: stow *
+      args:
+        chdir: "/home/{{ username }}/.dotfiles"
+
+  become_user: "{{ username }}"
