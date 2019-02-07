@@ -45,6 +45,7 @@ install_list:
   - woeusb
   - zsh
   - gnome-tweak-tool
+  - kubectl
 
 deps_list:
   - cmake
@@ -80,6 +81,7 @@ deps_list:
   - python-dev
   - libkrb5-dev
   - krb5-user
+  - cifs-utils
   - gnome-shell-extension-tilix-dropdown
 
 repo_list:
