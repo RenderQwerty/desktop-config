@@ -5,3 +5,24 @@ git_fullname: "Yurii Fisakov"
 git_email: "fisakov.root@gmail.com"
 users:
   - username: "{{ username }}"
+zsh_user: "{{ username }}"
+zsh_antigen_bundles_extras:
+  - wd
+  - dnf
+  - dotenv
+  - helm
+  - ssh-agent
+  - sudo
+  - common-aliases
+  - colored-man-pages
+  - ansible
+  - jira
+  - copyfile
+zsh_aliases:
+  - { alias: 'gt', action: 'git status' }
+  - { alias: 'gl', action: 'git log'}
+  - { alias: 'vstat', action: 'vagrant status'}
+  - { alias: 'vdest', action: 'vagrant destroy -f'}
+  - { alias: 'vssh', action: 'vagrant ssh'}
+  - { alias: 'vup', action: 'vagrant up'}
+  - { alias: 'val', action: 'vagrant validate'}
