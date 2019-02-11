@@ -14,7 +14,6 @@ zsh_antigen_bundles_extras:
   - ssh-agent
   - sudo
   - common-aliases
-  - colored-man-pages
   - ansible
   - jira
   - copyfile
