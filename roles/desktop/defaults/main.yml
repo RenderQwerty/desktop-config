@@ -31,7 +31,6 @@ install_list:
   - telegram-desktop
   - VirtualBox
   - WoeUSB
-  - gnome-tweak-tool
   - slack
   - kubectl
   - zsh
@@ -39,6 +38,8 @@ install_list:
 deps_list:
   - fedora-workstation-repositories
   - NetworkManager-l2tp-gnome
+  - arc-theme
+  - fontawesome-fonts
   - gcc
   - kernel-devel
   - kernel-headers
@@ -59,7 +60,13 @@ deps_list:
   - xdotool
   - wmctrl
   - xclip
-  - xsel
+  - xse
+  - lxappearance
+  - moka-icon-theme
+  - compton
+  - rofi
+  - ncdu
+  - arandr
 
 pip_install_packages:
   - name: docker
@@ -87,10 +94,6 @@ remove_list:
   - rhythmbox
   - simple-scan
 
-disabled_units:
-  - evolution-addressbook-factory
-  - evolution-calendar-factory
-  - evolution-source-registry
-
+disabled_units: []
 #bin_from_url:
 #  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl

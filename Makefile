@@ -1,5 +1,6 @@
 install:
-	sudo dnf install python-setuptools python-pip ansible python2-libselinux
+	sudo dnf copr enable yaroslav/i3desktop -y
+	sudo dnf install python-setuptools python-pip ansible python2-libselinux -y
 	ansible-galaxy install -r roles/requirements.yml
 	ansible-playbook -K --ask-vault-pass site.yml
 

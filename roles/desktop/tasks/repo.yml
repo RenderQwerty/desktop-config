@@ -38,3 +38,8 @@
     gpgkey:
         https://packages.cloud.google.com/yum/doc/yum-key.gpg
         https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+- name: add moca repo
+  yum_repository:
+    name: home:snwh:moka.repo
+    beseurl: https://download.opensuse.org/repositories/home:snwh:moka/Fedora_25/home:snwh:moka.repo
