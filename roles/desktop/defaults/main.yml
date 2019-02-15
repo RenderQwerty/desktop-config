@@ -67,6 +67,7 @@ deps_list:
   - rofi
   - ncdu
   - arandr
+  - NetworkManager-tui
 
 pip_install_packages:
   - name: docker
