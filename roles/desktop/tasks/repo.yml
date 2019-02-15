@@ -22,6 +22,7 @@
     name: vscode
     description: Visual Studio Code
     baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
 
 - name: add k8s repo
   yum_repository:
