@@ -27,18 +27,23 @@ install_list:
   - kubectl
   - lynx
   - remmina
-  - tilix
+  - termite
   - telegram-desktop
   - VirtualBox
   - WoeUSB
   - slack
   - kubectl
   - zsh
+  - i3-gaps
+  - i3lock 
+  - xbacklight
+  - feh
+  - conky
 
 deps_list:
   - fedora-workstation-repositories
-  - NetworkManager-l2tp-gnome
   - arc-theme
+  - stow
   - fontawesome-fonts
   - gcc
   - kernel-devel
@@ -49,7 +54,6 @@ deps_list:
   - curl
   - dnf-utils
   - krb5-devel
-  - dconf-editor
   - inotify-tools
   - sshpass
   - python2-libselinux
@@ -67,18 +71,19 @@ deps_list:
   - rofi
   - ncdu
   - arandr
-  - NetworkManager-tui
+  - xautolock
+  - xss-lock
+  - scrot
+  - neofetch
 
 pip_install_packages:
   - name: docker
   - name: pipenv
-  - name: virtualenv
   - name: flake8
   - name: apache-libcloud
   - name: paramiko
   - name: PyYAML
   - name: jinja2
-  - name: cryptography
   - name: httplib2
   - name: trytravis
   - name: ansible-lint
