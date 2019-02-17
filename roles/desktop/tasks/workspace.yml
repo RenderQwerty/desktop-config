@@ -33,8 +33,8 @@
     repo: https://github.com/bulletmark/libinput-gestures.git
     dest: "/home/{{ username }}/git-projects/libinput-gestures"
 
-- name: copy i3blocks
+- name: copy bumblebee-status
   git:
-    repo: https://github.com/vivien/i3blocks-contrib
-    dest: "/home/{{ username}}/.config/i3blocks"
+    repo: https://github.com/tobi-wan-kenobi/bumblebee-status.git
+    dest: "/home/{{ username}}/.config/bumblebee-status"
 

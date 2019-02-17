@@ -39,6 +39,7 @@ install_list:
   - xbacklight
   - feh
   - conky
+  - thunar
 
 deps_list:
   - fedora-workstation-repositories
