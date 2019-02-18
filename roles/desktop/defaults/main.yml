@@ -77,6 +77,7 @@ deps_list:
   - xss-lock
   - scrot
   - neofetch
+  - dunst
 
 pip_install_packages:
   - name: docker
