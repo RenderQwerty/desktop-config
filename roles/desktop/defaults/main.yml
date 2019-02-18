@@ -35,7 +35,7 @@ install_list:
   - kubectl
   - zsh
   - i3-gaps
-  - i3lock 
+  - i3lock
   - xbacklight
   - feh
   - conky
@@ -66,7 +66,7 @@ deps_list:
   - xdotool
   - wmctrl
   - xclip
-  - xse
+  - xsel
   - lxappearance
   - moka-icon-theme
   - compton
