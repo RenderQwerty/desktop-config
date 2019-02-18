@@ -31,3 +31,8 @@
     name: "{{ item }}"
     masked: yes
   loop: "{{ disabled_units }}"
+
+- name: enable scrolling in logitech marblemouse
+  copy:
+    src: 50-marblemouse.conf
+    dest: /etc/X11/xorg.conf.d/50-marblemouse.conf
