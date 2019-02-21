@@ -9,7 +9,6 @@ zsh_user: "{{ username }}"
 zsh_antigen_bundles_extras:
   - wd
   - dnf
-  - dotenv
   - helm
   - ssh-agent
   - sudo
