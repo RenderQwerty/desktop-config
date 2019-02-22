@@ -31,3 +31,4 @@ zsh_aliases:
   - { alias: 'kapp', action: 'kubectl apply -f '}
   - { alias: 'kget', action: 'kubectl get '}
   - { alias: 'klog', action: 'kubectl logs -f '}
+  - { alias: 'kfw', action: 'kubectl port-forward '}
