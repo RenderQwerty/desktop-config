@@ -7,3 +7,4 @@
 - src: renderqwerty.ansible_galaxy_hadolint
 - src: andrewrothstein.kubernetes-helm
 - src: viasite-ansible.zsh
+- src: geerlingguy.ruby
