@@ -16,4 +16,4 @@
     - desktop
     - renderqwerty.ansible_galaxy_hadolint
     - viasite-ansible.zsh
-    - geerlingguy.ruby
+    - renderqwerty.ansible_role_ruby
