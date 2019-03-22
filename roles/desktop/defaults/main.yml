@@ -40,6 +40,8 @@ install_list:
   - feh
   - conky
   - glances
+  - kubectl
+  - stow
 
 deps_list:
   - fedora-workstation-repositories

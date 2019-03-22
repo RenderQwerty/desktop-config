@@ -36,3 +36,17 @@
   copy:
     src: 50-marblemouse.conf
     dest: /etc/X11/xorg.conf.d/50-marblemouse.conf
+
+- name: setup dotfiles & shell
+  block:
+    - name: dotfiles
+      git:
+        repo: git@github.com:RenderQwerty/dotfiles.git
+        dest: "/home/{{ username }}/.dotfiles"
+
+    - name: stow links
+      shell: stow *
+      args:
+        chdir: "/home/{{ username }}/.dotfiles"
+
+  become_user: "{{ username }}"
