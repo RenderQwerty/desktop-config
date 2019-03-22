@@ -10,7 +10,7 @@
   dnf:
     name: "{{ repo_rpm_list }}"
     state: present
-  
+
 - name: add slack repo
   yum_repository:
     name: slack
@@ -22,12 +22,43 @@
     name: vscode
     description: Visual Studio Code
     baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
 
 - name: add k8s repo
   yum_repository:
     name: Kubernetes
     description: k8s
     baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64
+
+- name: add gcloud repo
+  yum_repository:
+    name: google-cloud-sdk
+    baseurl: https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+    description: google cloud sdk
+    gpgkey:
+        https://packages.cloud.google.com/yum/doc/yum-key.gpg
+        https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
+- name: add moca repo
+  yum_repository:
+    name: moca_icons
+    baseurl: http://download.opensuse.org/repositories/home:/snwh:/moka/Fedora_25/
+    gpgkey: http://download.opensuse.org/repositories/home:/snwh:/moka/Fedora_25//repodata/repomd.xml.key
+    description: moca icons
+
+- name: add termite repo
+  yum_repository:
+    name: termite
+    baseurl: https://copr-be.cloud.fedoraproject.org/results/skidnik/termite/fedora-$releasever-$basearch/
+    gpgkey: https://copr-be.cloud.fedoraproject.org/results/skidnik/termite/pubkey.gpg
+    description: terminal emulator
+
+- name: add i3-gaps repo
+  yum_repository:
+    name: i3-gaps
+    baseurl: https://copr-be.cloud.fedoraproject.org/results/gregw/i3desktop/fedora-$releasever-$basearch/
+    gpgkey: https://copr-be.cloud.fedoraproject.org/results/gregw/i3desktop/pubkey.gpg
+    description: i3-gaps
 
 - name: add google cloud sdk
   yum_repository:

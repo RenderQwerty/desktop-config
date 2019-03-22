@@ -1,8 +1,3 @@
-- name: create git for git-projects
-  file:
-    path: "/home/{{ username }}/git-projects"
-    state: directory
-
 - name: gitconfig
   template:
     src: .gitconfig.j2
@@ -32,4 +27,14 @@
     group: "{{ username }}"
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
+
+- name: setup libinput for touchpad support
+  git:
+    repo: https://github.com/bulletmark/libinput-gestures.git
+    dest: "/home/{{ username }}/git-projects/libinput-gestures"
+
+- name: copy bumblebee-status
+  git:
+    repo: https://github.com/tobi-wan-kenobi/bumblebee-status.git
+    dest: "/home/{{ username}}/.config/bumblebee-status"
 

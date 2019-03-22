@@ -14,7 +14,6 @@
 - name: config user parameters
   user:
     name: "{{ username }}"
-    shell: /usr/bin/zsh
     append: yes
     groups:
         - vboxusers
@@ -33,6 +32,10 @@
     masked: yes
   loop: "{{ disabled_units }}"
 
+- name: enable scrolling in logitech marblemouse
+  copy:
+    src: 50-marblemouse.conf
+    dest: /etc/X11/xorg.conf.d/50-marblemouse.conf
 
 - name: setup dotfiles & shell
   block:
@@ -40,16 +43,6 @@
       git:
         repo: git@github.com:RenderQwerty/dotfiles.git
         dest: "/home/{{ username }}/.dotfiles"
-
-    - name: autosuggestions
-      git:
-        repo: https://github.com/zsh-users/zsh-autosuggestions
-        dest: "/home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
-
-    - name: syntax highlight
-      git:
-        repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-        dest: "/home/{{ username }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
 
     - name: stow links
       shell: stow *

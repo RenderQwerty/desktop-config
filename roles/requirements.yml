@@ -6,3 +6,5 @@
 - src: andrewrothstein.vagrant
 - src: renderqwerty.ansible_galaxy_hadolint
 - src: andrewrothstein.kubernetes-helm
+- src: viasite-ansible.zsh
+- src: renderqwerty.ansible_role_ruby

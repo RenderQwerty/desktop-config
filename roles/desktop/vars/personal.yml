@@ -5,3 +5,29 @@ git_fullname: "Yurii Fisakov"
 git_email: "fisakov.root@gmail.com"
 users:
   - username: "{{ username }}"
+zsh_user: "{{ username }}"
+zsh_antigen_bundles_extras:
+  - wd
+  - dnf
+  - helm
+  - ssh-agent
+  - sudo
+  - common-aliases
+  - ansible
+  - jira
+  - copyfile
+  - kubectl
+zsh_aliases:
+  - { alias: 'gt', action: 'git status' }
+  - { alias: 'gl', action: 'git log'}
+  - { alias: 'vstat', action: 'vagrant status'}
+  - { alias: 'vdest', action: 'vagrant destroy -f'}
+  - { alias: 'vssh', action: 'vagrant ssh'}
+  - { alias: 'vup', action: 'vagrant up'}
+  - { alias: 'val', action: 'vagrant validate'}
+  - { alias: 'kctl', action: 'kubectl '}
+  - { alias: 'kdesc', action: 'kubectl describe '}
+  - { alias: 'kapp', action: 'kubectl apply -f '}
+  - { alias: 'kget', action: 'kubectl get '}
+  - { alias: 'klog', action: 'kubectl logs -f '}
+  - { alias: 'kfw', action: 'kubectl port-forward '}
