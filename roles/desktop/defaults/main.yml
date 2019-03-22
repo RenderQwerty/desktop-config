@@ -39,7 +39,6 @@ install_list:
   - xbacklight
   - feh
   - conky
-  - thunar
   - glances
 
 deps_list:
@@ -102,6 +101,8 @@ remove_list:
   - firefox
   - rhythmbox
   - simple-scan
+  - xfburn
+  - xfce4-terminal  
 
 disabled_units: []
 #bin_from_url:
