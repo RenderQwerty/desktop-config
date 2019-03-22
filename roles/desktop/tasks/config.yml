@@ -43,10 +43,8 @@
       git:
         repo: git@github.com:RenderQwerty/dotfiles.git
         dest: "/home/{{ username }}/.dotfiles"
-
     - name: stow links
       shell: stow *
       args:
         chdir: "/home/{{ username }}/.dotfiles"
-
   become_user: "{{ username }}"
