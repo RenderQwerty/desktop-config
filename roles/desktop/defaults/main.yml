@@ -5,7 +5,7 @@ packer_version: 1.3.5
 
 rpm_from_url:
   - https://zoom.us/client/latest/zoom_x86_64.rpm
-  - https://downloads.slack-edge.com/linux_releases/slack-3.3.7-0.1.fc21.x86_64.rpm
+#  - https://downloads.slack-edge.com/linux_releases/slack-3.3.7-0.1.fc21.x86_64.rpm
   - https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
 
 repo_rpm_list:
@@ -91,6 +91,8 @@ remove_list:
   - rhythmbox
   - simple-scan
   - gnome-contacts
+  - gnome-terminal
+  - evolution
 
 disabled_units: []
 #bin_from_url:
