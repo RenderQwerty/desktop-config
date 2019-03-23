@@ -19,7 +19,7 @@
     owner: "{{ username }}"
     group: "{{ username }}"
 
-- name: config ssh keys permissions
+- name: config ssh pub keys permissions
   file:
     path: "{{ item }}"
     mode: 0644
@@ -27,6 +27,16 @@
     group: "{{ username }}"
   with_fileglob:
     - "/home/{{ username }}/.ssh/*.pub"
+
+- name: config ssh priv keys permissions
+  file:
+    path: "{{ item }}"
+    mode: 0600
+    owner: "{{ username }}"
+    group: "{{ username }}"
+  with_fileglob:
+    - "/home/{{ username }}/.ssh/*_rsa"
+
 
 - name: setup libinput for touchpad support
   git:

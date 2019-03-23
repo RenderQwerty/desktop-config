@@ -61,5 +61,5 @@
 
 - name: set selinux to permissive mode
   selinux:
-    policy: targetted
+    policy: targeted
     state: permissive
