@@ -46,3 +46,10 @@
     baseurl: https://copr-be.cloud.fedoraproject.org/results/skidnik/termite/fedora-$releasever-$basearch/
     gpgkey: https://copr-be.cloud.fedoraproject.org/results/skidnik/termite/pubkey.gpg
     description: terminal emulator
+
+- name: add moca repo	
+  yum_repository:	
+    name: moca_icons	
+    baseurl: http://download.opensuse.org/repositories/home:/snwh:/moka/Fedora_25/	
+    gpgkey: http://download.opensuse.org/repositories/home:/snwh:/moka/Fedora_25//repodata/repomd.xml.key	
+    description: moca icons
