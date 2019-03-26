@@ -36,6 +36,7 @@ install_list:
   - glances
   - kubectl
   - stow
+  - geary
 
 deps_list:
   - powerline
