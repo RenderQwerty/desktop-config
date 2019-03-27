@@ -21,7 +21,6 @@ install_list:
   - keepassx
   - speedtest-cli
   - kubectl
-  - gnome-tweaks
   - lynx
   - remmina
   - termite
