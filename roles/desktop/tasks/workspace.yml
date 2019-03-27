@@ -21,8 +21,3 @@
       args:
         chdir: "/home/{{ username }}/.ssh/"
   become_user: "{{ username }}"
-
-- name: copy bumblebee-status
-  git:
-    repo: https://github.com/tobi-wan-kenobi/bumblebee-status.git
-    dest: "/home/{{ username}}/.config/bumblebee-status"

@@ -75,6 +75,7 @@ deps_list:
   - scrot
   - neofetch
   - dunst
+  - xfce4-panel
 
 pip_install_packages:
   - name: docker
