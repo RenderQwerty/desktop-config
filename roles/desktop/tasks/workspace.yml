@@ -21,3 +21,46 @@
       args:
         chdir: "/home/{{ username }}/.ssh/"
   become_user: "{{ username }}"
+
+- name: add required home config folders
+  file:
+    path: "/home/{{ username }}/.config/{{ item }}"
+    state: directory
+    owner: "{{ username }}"
+  loop: "{{ required_home_config_dirs }}"
+
+- name: copy i3wm config
+  copy:
+    src: i3wm/i3.config
+    dest: "/home/{{ username }}/.config/i3/config"
+    owner: "{{ username }}"
+
+- name: copy dunst config
+  copy:
+    src: i3wm/dunst_notifications.config
+    dest: "/home/{{ username }}/.config/dunst/config"
+    owner: "{{ username }}"
+
+- name: copy locker config
+  copy:
+    src: i3wm/lockscreen.sh
+    dest: "/home/{{ username }}/.config/i3/i3lock.sh"
+    owner: "{{ username }}"
+    mode: 0755
+
+- name: copy termite config
+  copy:
+    src: termite.config
+    dest: "/home/{{username }}/.config/termite/config"
+    owner: "{{ username }}"
+
+- name: enable scrolling in logitech marblemouse
+  copy:
+    src: 50-marblemouse.conf
+    dest: /etc/X11/xorg.conf.d/50-marblemouse.conf
+
+- name: copy wallpaper
+  get_url:
+    url: "{{ wallpaper }}"
+    dest: "/home/{{ username }}/Pictures/wp.jpg"
+    owner: "{{ username }}"

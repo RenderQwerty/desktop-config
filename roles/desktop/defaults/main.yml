@@ -107,3 +107,10 @@ remove_list:
 disabled_units: []
 #bin_from_url:
 #  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
+
+required_home_config_dirs:
+  - i3
+  - dunst
+  - termite
+
+wallpaper: https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-547017.jpg

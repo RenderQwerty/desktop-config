@@ -32,33 +32,6 @@
     masked: yes
   loop: "{{ disabled_units }}"
 
-- name: enable scrolling in logitech marblemouse
-  copy:
-    src: 50-marblemouse.conf
-    dest: /etc/X11/xorg.conf.d/50-marblemouse.conf
-
-- name: setup dotfiles
-  block:
-    - name: dotfiles
-      git:
-        repo: git@github.com:RenderQwerty/dotfiles.git
-        dest: "/home/{{ username }}/.dotfiles"
-    - name: stow links
-      shell: stow *
-      args:
-        chdir: "/home/{{ username }}/.dotfiles"
-  become_user: "{{ username }}"
-
-- name: copy termite config
-  block:
-    - file:
-        path: "/home/{{ username }}/.config/termite"
-        state: directory
-    - copy:
-        src: termite.config
-        dest: "/home/{{ username }}/.config/termite/config"
-  become_user: "{{ username }}"
-
 - name: set selinux to permissive mode
   selinux:
     policy: targeted
