@@ -60,3 +60,13 @@
     baseurl: https://copr-be.cloud.fedoraproject.org/results/gregw/i3desktop/fedora-$releasever-$basearch/
     gpgkey: https://copr-be.cloud.fedoraproject.org/results/gregw/i3desktop/pubkey.gpg
     description: i3-gaps
+
+- name: add repo with additional packages for i3wm
+  command: "dnf copr enable yaroslav/i3desktop -y"
+  args:
+    creates: "/etc/yum.repos.d/_copr:copr.fedorainfracloud.org:yaroslav:i3desktop.repo"
+
+- name: add repo with i3lock-color package
+  command: "dnf copr enable watersalesman/i3lock-color -y"
+  args:
+    creates: "/etc/yum.repos.d/_copr:copr.fedorainfracloud.org:watersalesman:i3lock-color.repo"
