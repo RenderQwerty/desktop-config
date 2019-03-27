@@ -53,3 +53,10 @@
     baseurl: http://download.opensuse.org/repositories/home:/snwh:/moka/Fedora_25/
     gpgkey: http://download.opensuse.org/repositories/home:/snwh:/moka/Fedora_25//repodata/repomd.xml.key
     description: moca icons
+
+- name: add i3-gaps repo
+  yum_repository:
+    name: i3-gaps
+    baseurl: https://copr-be.cloud.fedoraproject.org/results/gregw/i3desktop/fedora-$releasever-$basearch/
+    gpgkey: https://copr-be.cloud.fedoraproject.org/results/gregw/i3desktop/pubkey.gpg
+    description: i3-gaps

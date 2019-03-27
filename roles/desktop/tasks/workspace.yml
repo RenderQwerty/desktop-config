@@ -22,7 +22,7 @@
         chdir: "/home/{{ username }}/.ssh/"
   become_user: "{{ username }}"
 
-- name: setup libinput for touchpad support
+- name: copy bumblebee-status
   git:
-    repo: https://github.com/bulletmark/libinput-gestures.git
-    dest: "/home/{{ username }}/git-projects/libinput-gestures"
+    repo: https://github.com/tobi-wan-kenobi/bumblebee-status.git
+    dest: "/home/{{ username}}/.config/bumblebee-status"
