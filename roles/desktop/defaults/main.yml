@@ -75,6 +75,10 @@ deps_list:
   - neofetch
   - dunst
   - xfce4-panel
+  - xfce4-mailwatch-plugin
+  - xfce4-places-plugin
+  - xfce4-statusnotifier-plugin
+  - xfce4-weather-plugin
 
 pip_install_packages:
   - name: docker
