@@ -25,7 +25,6 @@ install_list:
   - remmina
   - termite
   - telegram-desktop
-  - VirtualBox
   - WoeUSB
   - slack
   - zsh
@@ -55,6 +54,7 @@ deps_list:
   - sshpass
   - python2-libselinux
   - python3-devel
+  - dkms
   - python3-setuptools
   - python3-virtualenv
   - python2-devel
