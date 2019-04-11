@@ -22,6 +22,6 @@ i3lock \
   --insidevercolor=fecf4dff --insidewrongcolor=d23c3dff \
   --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos="x+290:h-120" \
   --radius=20 --ring-width=3 --veriftext="" --wrongtext="No luck for you, huh!" \
-  --timecolor="ffffffff" --datecolor="ffffffff"
+  --timecolor="ffffffff" --datecolor="ffffffff" --keylayout 0
 
 rm $TMPBG

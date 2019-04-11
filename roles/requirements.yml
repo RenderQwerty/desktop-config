@@ -8,3 +8,4 @@
 - src: andrewrothstein.kubernetes-helm
 - src: viasite-ansible.zsh
 - src: renderqwerty.ansible_role_ruby
+- src: renderqwerty.ansible_hashicorp_vault_client
