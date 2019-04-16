@@ -79,6 +79,7 @@ deps_list:
   - xfce4-places-plugin
   - xfce4-statusnotifier-plugin
   - xfce4-weather-plugin
+  - groovy
 
 pip_install_packages:
   - name: docker
