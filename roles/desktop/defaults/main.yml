@@ -109,7 +109,9 @@ remove_list:
   - evolution
 
 disabled_units: []
-#bin_from_url:
+
+bin_from_url:
+  - https://cht.sh/:cht.sh
 #  - https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
 
 required_home_config_dirs:
