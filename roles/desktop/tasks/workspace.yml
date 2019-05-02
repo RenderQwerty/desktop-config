@@ -57,6 +57,14 @@
     owner: "{{ username }}"
     state: link
 
+- name: link zsh config file
+  file:
+    src: "{{ role_path }}/files/.zshrc.local"
+    path: "/home/{{username }}/.config/termite/config"
+    owner: "{{ username }}"
+    state: link
+
+
 - name: enable scrolling in logitech marblemouse
   copy:
     src: 50-marblemouse.conf

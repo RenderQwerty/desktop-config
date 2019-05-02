@@ -1,0 +1,3 @@
+complete -o nospace -C /usr/sbin/vault vault
+alias vpro="vagrant up --provision "
+export AWS_DEFAULT_REGION="us-east-1"
